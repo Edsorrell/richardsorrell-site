@@ -1,0 +1,53 @@
+{
+  "headline": "Paintings of things, not the appearance of things.",
+  "intro": "Invented paintings and drawings, built from sketches, memory and a lifetime of looking. Made in a studio in West Cornwall.",
+  "hero": { "title": "Rising Path", "medium": "Oil", "image": "/img/rising-path.jpg" },
+  "paintings_heading": "Landscape and figures",
+  "paintings_intro": "Recent work. All paintings are for sale; please get in touch to arrange viewing, payment and delivery.",
+  "paintings": [
+    { "title": "Evening Thoughts", "medium": "", "image": "/img/evening-thoughts.jpg" },
+    { "title": "Birds Coming into Roost", "medium": "", "image": "/img/birds-roost.jpg" },
+    { "title": "Cottages by the Sea", "medium": "", "image": "/img/cottages.jpg" },
+    { "title": "Starlings", "medium": "", "image": "/img/starlings.jpg" },
+    { "title": "Striding Through Dublin", "medium": "", "image": "/img/striding-dublin.jpg" },
+    { "title": "A Dance", "medium": "", "image": "/img/a-dance.jpg" },
+    { "title": "Dawn", "medium": "", "image": "/img/dawn.jpg" },
+    { "title": "Out in Nature", "medium": "", "image": "/img/out-in-nature.jpg" },
+    { "title": "Birds Rising over a Lake", "medium": "", "image": "/img/birds-lake.jpg" }
+  ],
+  "drawings_intro": "Ink and brush drawings, shown at the Works on Paper Fair.",
+  "drawings": [
+    { "title": "Two People by a Hedge", "medium": "Ink", "image": "/img/two-people-hedge.jpg" },
+    { "title": "Laughing Woman", "medium": "Ink", "image": "/img/laughing-woman.jpg" }
+  ],
+  "about_lede": "The pictures are inventions, or reinventions of reality. Sometimes they may appear a little awkward and strange, but it is their awkwardness that gives them the power to communicate.",
+  "about_text": "Richard Sorrell was born in 1948, the son of the historical draughtsman and painter Alan Sorrell and the watercolourist Elizabeth Sorrell. He studied at Walthamstow Art School, Kingston College of Art and the Royal Academy Schools.\n\nFor around 25 years, living in London and Norfolk, he painted landscape, still life and portraits, and became known for aerial views of great houses for the National Trust and private owners. Over the past two decades the invented paintings have come to the fore, alongside an interest in sculpture, gardens and planting.\n\nHe was elected to the Royal Watercolour Society in 1975 and served as its President from 2006 to 2009.",
+  "societies": [
+    { "name": "Royal Watercolour Society", "note": "President 2006 to 2009" },
+    { "name": "Royal Society of British Artists", "note": "de Laszlo Medal 2002" },
+    { "name": "New English Art Club", "note": "" },
+    { "name": "Art Workers Guild", "note": "" },
+    { "name": "Small Paintings Group", "note": "" }
+  ],
+  "exhibitions": [
+    { "name": "Royal Academy Summer Exhibition", "note": "since 1971" },
+    { "name": "Agnew's, London", "note": "" },
+    { "name": "Hayward Gallery, Lutyens Exhibition", "note": "" },
+    { "name": "Galleries Sternberg, Chicago", "note": "" },
+    { "name": "Rainyday Gallery, Penzance", "note": "" }
+  ],
+  "collections": [
+    { "name": "Victoria and Albert Museum", "note": "" },
+    { "name": "The National Trust", "note": "" },
+    { "name": "Museum of London", "note": "" },
+    { "name": "The Courtauld Institute", "note": "" },
+    { "name": "The Faringdon Collection", "note": "" }
+  ],
+  "films": [
+    { "title": "Landscape and Figures", "text": "From The Sunshine Painters and The Open Sky, two films by Stephen Gammond featuring Richard Sorrell.", "url": "https://www.youtube.com/watch?v=PMdFaf_LvwY" },
+    { "title": "A Virtual Exhibition", "text": "Richard introduces the idea behind showing his work online as an exhibition you can walk through.", "url": "https://www.youtube.com/watch?v=s5n29ksD5f4" }
+  ],
+  "phone": "01736 369 613",
+  "email": "sorrellr@aol.com",
+  "address": "Higher Hellangove Farm\nBadgers Cross, Gulval\nPenzance, Cornwall TR20 8XD"
+}

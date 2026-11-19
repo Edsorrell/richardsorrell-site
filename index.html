@@ -124,35 +124,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <main id="top">
   <div class="wrap hero">
     <div>
-      <h1>Paintings of things, <em>not the appearance</em> of things.</h1>
-      <p>Invented paintings and drawings, built from sketches, memory and a lifetime of looking. Made in a studio in West Cornwall.</p>
+      <h1 id="headline"></h1>
+      <p id="intro"></p>
     </div>
-    <figure>
-      <a href="#w-rising-path"><img src="img/rising-path.jpg" alt="Rising Path, a painting of a woman in pink and a man in a dark coat on a curving lane beside dense yellow and blue hedgerows"></a>
-      <figcaption class="cap"><b>Rising Path</b><span>Oil</span></figcaption>
-    </figure>
+    <figure id="hero"></figure>
   </div>
 
   <section id="paintings">
     <div class="wrap">
       <div class="head">
         <div class="label">New Paintings</div>
-        <div>
-          <h2>Landscape and figures</h2>
-          <p>Recent work. All paintings are for sale; please get in touch to arrange viewing, payment and delivery.</p>
-        </div>
+        <div><h2 id="paintings-heading"></h2><p id="paintings-intro"></p></div>
       </div>
-      <div class="gallery">
-        <div class="work"><a href="#w-evening-thoughts"><img src="img/evening-thoughts.jpg" alt="Evening Thoughts"></a><div class="cap"><b>Evening Thoughts</b></div></div>
-        <div class="work"><a href="#w-birds-roost"><img src="img/birds-roost.jpg" alt="Birds Coming into Roost"></a><div class="cap"><b>Birds Coming into Roost</b></div></div>
-        <div class="work"><a href="#w-cottages"><img src="img/cottages.jpg" alt="Cottages by the Sea"></a><div class="cap"><b>Cottages by the Sea</b></div></div>
-        <div class="work"><a href="#w-starlings"><img src="img/starlings.jpg" alt="Starlings"></a><div class="cap"><b>Starlings</b></div></div>
-        <div class="work"><a href="#w-striding-dublin"><img src="img/striding-dublin.jpg" alt="Striding Through Dublin"></a><div class="cap"><b>Striding Through Dublin</b></div></div>
-        <div class="work"><a href="#w-a-dance"><img src="img/a-dance.jpg" alt="A Dance"></a><div class="cap"><b>A Dance</b></div></div>
-        <div class="work"><a href="#w-dawn"><img src="img/dawn.jpg" alt="Dawn"></a><div class="cap"><b>Dawn</b></div></div>
-        <div class="work"><a href="#w-out-in-nature"><img src="img/out-in-nature.jpg" alt="Out in Nature"></a><div class="cap"><b>Out in Nature</b></div></div>
-        <div class="work"><a href="#w-birds-lake"><img src="img/birds-lake.jpg" alt="Birds Rising over a Lake"></a><div class="cap"><b>Birds Rising over a Lake</b></div></div>
-      </div>
+      <div class="gallery" id="paintings-grid"></div>
     </div>
   </section>
 
@@ -160,15 +144,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="wrap">
       <div class="head">
         <div class="label">Works on Paper</div>
-        <div>
-          <h2>Drawings</h2>
-          <p>Ink and brush drawings, shown at the Works on Paper Fair.</p>
-        </div>
+        <div><h2>Drawings</h2><p id="drawings-intro"></p></div>
       </div>
-      <div class="gallery two">
-        <div class="work"><a href="#w-two-people-hedge"><img src="img/two-people-hedge.jpg" alt="Two People by a Hedge"></a><div class="cap"><b>Two People by a Hedge</b><span>Ink</span></div></div>
-        <div class="work"><a href="#w-laughing-woman"><img src="img/laughing-woman.jpg" alt="Laughing Woman"></a><div class="cap"><b>Laughing Woman</b><span>Ink</span></div></div>
-      </div>
+      <div class="gallery two" id="drawings-grid"></div>
     </div>
   </section>
 
@@ -177,45 +155,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="about">
         <div class="label">About</div>
         <div>
-          <p class="lede">The pictures are inventions, or reinventions of reality. Sometimes they may appear a little awkward and strange, but it is their awkwardness that gives them the power to communicate.</p>
-          <div class="body" style="margin-top:32px;color:var(--mute);max-width:62ch">
-            <p>Richard Sorrell was born in 1948, the son of the historical draughtsman and painter Alan Sorrell and the watercolourist Elizabeth Sorrell. He studied at Walthamstow Art School, Kingston College of Art and the Royal Academy Schools.</p>
-            <p>For around 25 years, living in London and Norfolk, he painted landscape, still life and portraits, and became known for aerial views of great houses for the National Trust and private owners. Over the past two decades the invented paintings have come to the fore, alongside an interest in sculpture, gardens and planting.</p>
-            <p>He was elected to the Royal Watercolour Society in 1975 and served as its President from 2006 to 2009.</p>
-          </div>
+          <p class="lede" id="about-lede"></p>
+          <div class="body" id="about-text" style="margin-top:32px;color:var(--mute);max-width:62ch"></div>
         </div>
       </div>
       <div class="facts">
-        <div>
-          <h3>Societies</h3>
-          <ul>
-            <li>Royal Watercolour Society <span>President 2006 to 2009</span></li>
-            <li>Royal Society of British Artists <span>de Laszlo Medal 2002</span></li>
-            <li>New English Art Club</li>
-            <li>Art Workers Guild</li>
-            <li>Small Paintings Group</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Exhibitions</h3>
-          <ul>
-            <li>Royal Academy Summer Exhibition <span>since 1971</span></li>
-            <li>Agnew's, London</li>
-            <li>Hayward Gallery, Lutyens Exhibition</li>
-            <li>Galleries Sternberg, Chicago</li>
-            <li>Rainyday Gallery, Penzance</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Collections</h3>
-          <ul>
-            <li>Victoria and Albert Museum</li>
-            <li>The National Trust</li>
-            <li>Museum of London</li>
-            <li>The Courtauld Institute</li>
-            <li>The Faringdon Collection</li>
-          </ul>
-        </div>
+        <div><h3>Societies</h3><ul id="societies"></ul></div>
+        <div><h3>Exhibitions</h3><ul id="exhibitions"></ul></div>
+        <div><h3>Collections</h3><ul id="collections"></ul></div>
       </div>
     </div>
   </section>
@@ -226,18 +173,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="label">Film and Talks</div>
         <div><h2>In the studio</h2></div>
       </div>
-      <div class="film">
-        <a href="https://www.youtube.com/watch?v=PMdFaf_LvwY" target="_blank" rel="noopener">
-          <h3>Landscape and Figures</h3>
-          <p>From The Sunshine Painters and The Open Sky, two films by Stephen Gammond featuring Richard Sorrell.</p>
-          <span class="go">Watch on YouTube ↗</span>
-        </a>
-        <a href="https://www.youtube.com/watch?v=s5n29ksD5f4" target="_blank" rel="noopener">
-          <h3>A Virtual Exhibition</h3>
-          <p>Richard introduces the idea behind showing his work online as an exhibition you can walk through.</p>
-          <span class="go">Watch on YouTube ↗</span>
-        </a>
-      </div>
+      <div class="film" id="films"></div>
     </div>
   </section>
 
@@ -246,9 +182,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="contact">
         <div class="label">Contact</div>
         <div>
-          <p class="big">To buy a painting or arrange a studio visit, call <a href="tel:+441736369613">01736 369 613</a> or email <a href="mailto:sorrellr@aol.com">sorrellr@aol.com</a></p>
+          <p class="big" id="contact-line"></p>
           <div class="addr">
-            <div><span>Studio</span>Higher Hellangove Farm<br>Badgers Cross, Gulval<br>Penzance, Cornwall TR20 8XD</div>
+            <div><span>Studio</span><div id="address"></div></div>
             <div><span>Elsewhere</span><a href="https://richard-sorrell.blogspot.com/" target="_blank" rel="noopener">Blog ↗</a><br><a href="https://twitter.com/Richard_Sorrell" target="_blank" rel="noopener">Twitter ↗</a></div>
           </div>
         </div>
@@ -259,19 +195,48 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <footer><div class="wrap"><span>© Richard Sorrell</span><span>West Cornwall</span></div></footer>
 
-<!-- Lightboxes -->
-<div class="lb" id="w-rising-path"><a class="x" href="#top">Close</a><figure><img src="img/rising-path.jpg" alt="Rising Path"><figcaption>Rising Path<span>Oil</span></figcaption></figure></div>
-<div class="lb" id="w-evening-thoughts"><a class="x" href="#paintings">Close</a><figure><img src="img/evening-thoughts.jpg" alt="Evening Thoughts"><figcaption>Evening Thoughts</figcaption></figure></div>
-<div class="lb" id="w-birds-roost"><a class="x" href="#paintings">Close</a><figure><img src="img/birds-roost.jpg" alt="Birds Coming into Roost"><figcaption>Birds Coming into Roost</figcaption></figure></div>
-<div class="lb" id="w-cottages"><a class="x" href="#paintings">Close</a><figure><img src="img/cottages.jpg" alt="Cottages by the Sea"><figcaption>Cottages by the Sea</figcaption></figure></div>
-<div class="lb" id="w-starlings"><a class="x" href="#paintings">Close</a><figure><img src="img/starlings.jpg" alt="Starlings"><figcaption>Starlings</figcaption></figure></div>
-<div class="lb" id="w-striding-dublin"><a class="x" href="#paintings">Close</a><figure><img src="img/striding-dublin.jpg" alt="Striding Through Dublin"><figcaption>Striding Through Dublin</figcaption></figure></div>
-<div class="lb" id="w-a-dance"><a class="x" href="#paintings">Close</a><figure><img src="img/a-dance.jpg" alt="A Dance"><figcaption>A Dance</figcaption></figure></div>
-<div class="lb" id="w-dawn"><a class="x" href="#paintings">Close</a><figure><img src="img/dawn.jpg" alt="Dawn"><figcaption>Dawn</figcaption></figure></div>
-<div class="lb" id="w-out-in-nature"><a class="x" href="#paintings">Close</a><figure><img src="img/out-in-nature.jpg" alt="Out in Nature"><figcaption>Out in Nature</figcaption></figure></div>
-<div class="lb" id="w-birds-lake"><a class="x" href="#paintings">Close</a><figure><img src="img/birds-lake.jpg" alt="Birds Rising over a Lake"><figcaption>Birds Rising over a Lake</figcaption></figure></div>
-<div class="lb" id="w-two-people-hedge"><a class="x" href="#drawings">Close</a><figure><img src="img/two-people-hedge.jpg" alt="Two People by a Hedge"><figcaption>Two People by a Hedge<span>Ink</span></figcaption></figure></div>
-<div class="lb" id="w-laughing-woman"><a class="x" href="#drawings">Close</a><figure><img src="img/laughing-woman.jpg" alt="Laughing Woman"><figcaption>Laughing Woman<span>Ink</span></figcaption></figure></div>
+<div id="lightboxes"></div>
 
+<script>
+(function(){
+  var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
+  var slug=function(s,i){return 'w-'+(String(s||'work').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'work')+'-'+i;};
+  var $=function(id){return document.getElementById(id);};
+  var paras=function(t){return String(t||'').split(/\n\s*\n/).filter(Boolean).map(function(p){return '<p>'+esc(p).replace(/\n/g,'<br>')+'</p>';}).join('');};
+  var boxes=[];
+  function work(w,i,back){
+    if(!w||!w.image) return '';
+    var id=slug(w.title,i);
+    boxes.push('<div class="lb" id="'+id+'"><a class="x" href="#'+back+'">Close</a><figure><img src="'+esc(w.image)+'" alt="'+esc(w.title)+'" loading="lazy"><figcaption>'+esc(w.title)+(w.medium?'<span>'+esc(w.medium)+'</span>':'')+'</figcaption></figure></div>');
+    return '<div class="work"><a href="#'+id+'"><img src="'+esc(w.image)+'" alt="'+esc(w.title)+'" loading="lazy"></a><div class="cap"><b>'+esc(w.title)+'</b>'+(w.medium?'<span>'+esc(w.medium)+'</span>':'')+'</div></div>';
+  }
+  function list(items){return (items||[]).map(function(x){return '<li>'+esc(x.name)+(x.note?' <span>'+esc(x.note)+'</span>':'')+'</li>';}).join('');}
+  fetch('/data/site.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(d){
+    $('headline').textContent=d.headline||'';
+    $('intro').textContent=d.intro||'';
+    if(d.hero&&d.hero.image){
+      var hid=slug(d.hero.title,'h');
+      boxes.push('<div class="lb" id="'+hid+'"><a class="x" href="#top">Close</a><figure><img src="'+esc(d.hero.image)+'" alt="'+esc(d.hero.title)+'"><figcaption>'+esc(d.hero.title)+(d.hero.medium?'<span>'+esc(d.hero.medium)+'</span>':'')+'</figcaption></figure></div>');
+      $('hero').innerHTML='<a href="#'+hid+'"><img src="'+esc(d.hero.image)+'" alt="'+esc(d.hero.title)+'"></a><figcaption class="cap"><b>'+esc(d.hero.title)+'</b><span>'+esc(d.hero.medium)+'</span></figcaption>';
+    }
+    $('paintings-heading').textContent=d.paintings_heading||'';
+    $('paintings-intro').textContent=d.paintings_intro||'';
+    $('paintings-grid').innerHTML=(d.paintings||[]).map(function(w,i){return work(w,'p'+i,'paintings');}).join('');
+    $('drawings-intro').textContent=d.drawings_intro||'';
+    $('drawings-grid').innerHTML=(d.drawings||[]).map(function(w,i){return work(w,'d'+i,'drawings');}).join('');
+    $('about-lede').textContent=d.about_lede||'';
+    $('about-text').innerHTML=paras(d.about_text);
+    $('societies').innerHTML=list(d.societies);
+    $('exhibitions').innerHTML=list(d.exhibitions);
+    $('collections').innerHTML=list(d.collections);
+    $('films').innerHTML=(d.films||[]).map(function(f){return '<a href="'+esc(f.url)+'" target="_blank" rel="noopener"><h3>'+esc(f.title)+'</h3><p>'+esc(f.text)+'</p><span class="go">Watch on YouTube ↗</span></a>';}).join('');
+    var tel=String(d.phone||'').replace(/[^0-9+]/g,'').replace(/^0/,'+44');
+    $('contact-line').innerHTML='To buy a painting or arrange a studio visit, call <a href="tel:'+esc(tel)+'">'+esc(d.phone)+'</a> or email <a href="mailto:'+esc(d.email)+'">'+esc(d.email)+'</a>';
+    $('address').innerHTML=esc(d.address).replace(/\n/g,'<br>');
+    $('lightboxes').innerHTML=boxes.join('');
+    if(location.hash){var h=location.hash;location.hash='';location.hash=h;}
+  }).catch(function(){$('intro').textContent='Sorry, the gallery could not be loaded. Please refresh the page.';});
+})();
+</script>
 </body>
 </html>
