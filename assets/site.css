@@ -242,3 +242,22 @@ body.lbx-open{overflow:hidden}
 }
 .lbx .x:focus{outline:none}
 .lbx .x:focus-visible{outline:1px solid var(--ink);outline-offset:2px}
+
+/* View in a room */
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--ink);width:100%;cursor:pointer;font:500 15px/1 var(--sans)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper);opacity:1}
+.lbx .roomview{display:none;position:absolute;inset:0;z-index:3;background:var(--paper);flex-direction:column;padding:20px 28px 24px;cursor:default}
+.lbx.room .roomview{display:flex}
+.rv-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-right:64px}
+.rv-tabs{display:flex;gap:20px;font-size:14px}
+.rv-tabs button,.rv-back{background:none;border:0;font:inherit;font-size:14px;color:var(--mute);cursor:pointer;padding:0 0 4px;border-bottom:1px solid transparent}
+.rv-tabs button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink)}
+.rv-back:hover,.rv-tabs button:hover{color:var(--ink)}
+.rv-scene{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:16px 0}
+.rv-scene svg{width:100%;height:100%;max-height:100%;display:block}
+.rv-note{font-size:13px;color:var(--mute);text-align:center}
+@media (max-width:900px){
+  .lbx .roomview{padding:16px 12px}
+  .rv-bar{padding-right:56px;flex-wrap:wrap}
+  .rv-back{display:none}
+}
