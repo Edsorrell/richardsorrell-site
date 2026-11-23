@@ -114,37 +114,15 @@
 
   /* ---------- Home ---------- */
   function initHero(d){
-    var bleed=$('hero');
-    if(!(d.hero&&d.hero.image)){bleed.style.display='none';return;}
-    register('hero',[d.hero]);
-    var hi=$('hero-img');hi.src=d.hero.image;hi.alt=d.hero.title||'';
-    var hc=$('hero-credit');hc.textContent=d.hero.title||'';hc.href='#'+d.hero._id;hc.setAttribute('data-open',d.hero._id);
+    var op=$('hero');
     var h=$('headline'),words=(d.headline||'').trim().split(/\s+/);
     h.innerHTML=words.map(function(w,i){return '<span class="wd"><span style="--d:'+i+'">'+esc(w)+'</span></span>';}).join(' ');
     $('intro').textContent=d.intro||'';
-    var glide=bleed.querySelector('.glide'),img=hi;
-    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var K=1,EASE=0.07,D=0,c=null,raf=0;
-    function measure(){
-      glide.style.transform='none';
-      var vh=window.innerHeight,top=bleed.getBoundingClientRect().top+window.scrollY;
-      var B=Math.min(96,Math.max(40,window.innerWidth*0.07));
-      var restBottom=glide.getBoundingClientRect().bottom+window.scrollY-top;
-      D=Math.max(0,restBottom-(vh-B));
-      var sEnd=top+img.offsetHeight-vh; K=sEnd>1?D/sEnd:1;
-    }
-    function frame(){
-      var t=-(D-Math.min(D,window.scrollY*K));
-      if(c===null||reduce){c=t;}else{c+=(t-c)*EASE;}
-      glide.style.transform='translate3d(0,'+c.toFixed(2)+'px,0)';
-      raf=Math.abs(t-c)>0.1?requestAnimationFrame(frame):0;
-    }
-    function reset(){measure();c=null;frame();}
-    function start(){reset();bleed.classList.add('ready');}
-    if(img.complete&&img.naturalWidth)start();else{img.addEventListener('load',start);img.addEventListener('error',start);}
-    window.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(frame);},{passive:true});
-    window.addEventListener('resize',reset);
-    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(reset);
+    var hi=$('hero-img');
+    if(d.hero&&d.hero.image){hi.src=d.hero.image;$('hero-cap').innerHTML=d.hero.caption?'<span>'+esc(d.hero.caption)+'</span>':'';}
+    else{op.querySelector('.op-photo').style.display='none';}
+    op.classList.add('ready');
+    var l=$('strip-lede'); if(l) l.textContent=d.about_lede||'';
   }
   function initHome(d){
     initHero(d);

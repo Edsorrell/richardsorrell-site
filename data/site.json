@@ -2,15 +2,23 @@
     "headline": "Imagined, from a lifetime of looking.",
     "intro": "Paintings and drawings built from sketches, memory and the process of painting itself. Made in a studio in West Cornwall.",
     "hero": {
-        "title": "Starlings",
-        "year": "",
-        "medium": "Acrylic",
-        "size": "20 × 22 cm",
-        "image": "/img/starlings.jpg"
+        "image": "/img/studio.jpg",
+        "caption": "Richard in his studio, West Cornwall"
     },
     "paintings_heading": "Landscape and figures",
     "paintings_intro": "Recent work. All paintings are for sale; please get in touch to arrange viewing, payment and delivery.",
     "paintings": [
+        {
+            "title": "Starlings",
+            "year": "",
+            "medium": "Acrylic",
+            "size": "20 × 22 cm",
+            "image": "/img/starlings.jpg",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": ""
+        },
         {
             "title": "Dancing in the Garden",
             "year": "",
