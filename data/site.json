@@ -1,139 +1,286 @@
 {
-  "headline": "Imagined, from a lifetime of looking.",
-  "intro": "Paintings and drawings built from sketches, memory and the process of painting itself. Made in a studio in West Cornwall.",
-  "hero": {
-    "title": "Starlings",
-    "image": "/img/starlings.jpg"
-  },
-  "paintings_heading": "Landscape and figures",
-  "paintings_intro": "Recent work. All paintings are for sale; please get in touch to arrange viewing, payment and delivery.",
-  "paintings": [
-    {
-      "title": "Biting A Burger ",
-      "medium": "Acrylic (size 17x23cm) £700",
-      "image": "/img/20261122_152710.jpg"
+    "headline": "Imagined, from a lifetime of looking.",
+    "intro": "Paintings and drawings built from sketches, memory and the process of painting itself. Made in a studio in West Cornwall.",
+    "hero": {
+        "title": "Starlings",
+        "medium": "Acrylic, 20 × 22 cm",
+        "image": "/img/starlings.jpg"
     },
-    {
-      "title": "Evening Thoughts",
-      "image": "/img/evening-thoughts.jpg"
-    },
-    {
-      "title": "Birds Coming into Roost",
-      "medium": "Birds Coming Into Roost (Acrylic 19x24 cm) £750",
-      "image": "/img/birds_coming_in_to_roost.jpg"
-    },
-    {
-      "title": "Two Women £1300",
-      "medium": "Watercolour ",
-      "image": "/img/20201002_093126.jpg"
-    },
-    {
-      "title": "Starlings",
-      "image": "/img/starlings.jpg"
-    },
-    {
-      "title": "Striding Through Dublin",
-      "image": "/img/striding-dublin.jpg"
-    },
-    {
-      "title": "A Dance",
-      "image": "/img/a-dance.jpg"
-    },
-    {
-      "title": "Dawn",
-      "image": "/img/dawn.jpg"
-    },
-    {
-      "title": "Out in Nature",
-      "image": "/img/out-in-nature.jpg"
-    },
-    {
-      "title": "Birds Rising over a Lake",
-      "image": "/img/birds-lake.jpg"
-    }
-  ],
-  "drawings_intro": "Ink and brush drawings, shown at the Works on Paper Fair.",
-  "drawings": [
-    {
-      "title": "Two People by a Hedge",
-      "medium": "Ink",
-      "image": "/img/two-people-hedge.jpg"
-    },
-    {
-      "title": "Laughing Woman",
-      "medium": "Ink",
-      "image": "/img/laughing-woman.jpg"
-    }
-  ],
-  "about_lede": "The pictures are inventions, or reinventions of reality. Sometimes they may appear a little awkward and strange, but it is their awkwardness that gives them the power to communicate.",
-  "about_text": "Richard Sorrell was born in 1948, the son of the historical draughtsman and painter Alan Sorrell and the watercolourist Elizabeth Sorrell. He studied at Walthamstow Art School, Kingston College of Art and the Royal Academy Schools.\n\nFor around 25 years, living in London and Norfolk, he painted landscape, still life and portraits, and became known for aerial views of great houses for the National Trust and private owners. Over the past two decades the invented paintings have come to the fore, alongside an interest in sculpture, gardens and planting.\n\nHe was elected to the Royal Watercolour Society in 1975 and served as its President from 2006 to 2009.",
-  "societies": [
-    {
-      "name": "Royal Watercolour Society",
-      "note": "President 2006 to 2009"
-    },
-    {
-      "name": "Royal Society of British Artists",
-      "note": "de Laszlo Medal 2002"
-    },
-    {
-      "name": "New English Art Club"
-    },
-    {
-      "name": "Art Workers Guild"
-    },
-    {
-      "name": "Small Paintings Group"
-    }
-  ],
-  "exhibitions": [
-    {
-      "name": "Royal Academy Summer Exhibition",
-      "note": "since 1971"
-    },
-    {
-      "name": "Agnew's, London"
-    },
-    {
-      "name": "Hayward Gallery, Lutyens Exhibition"
-    },
-    {
-      "name": "Galleries Sternberg, Chicago"
-    },
-    {
-      "name": "Rainyday Gallery, Penzance"
-    }
-  ],
-  "collections": [
-    {
-      "name": "Victoria and Albert Museum"
-    },
-    {
-      "name": "The National Trust"
-    },
-    {
-      "name": "Museum of London"
-    },
-    {
-      "name": "The Courtauld Institute"
-    },
-    {
-      "name": "The Faringdon Collection"
-    }
-  ],
-  "films": [
-    {
-      "title": "Landscape and Figures",
-      "text": "From The Sunshine Painters and The Open Sky, two films by Stephen Gammond featuring Richard Sorrell.",
-      "url": "https://www.youtube.com/watch?v=PMdFaf_LvwY"
-    },
-    {
-      "title": "A Virtual Exhibition",
-      "text": "Richard introduces the idea behind showing his work online as an exhibition you can walk through.",
-      "url": "https://www.youtube.com/watch?v=s5n29ksD5f4"
-    }
-  ],
-  "phone": "07979 514 618",
-  "email": "sorrellr@aol.com",
-  "address": "Higher Hellangove Farm\nBadgers Cross, Gulval\nPenzance, Cornwall TR20 8XD"
+    "paintings_heading": "Landscape and figures",
+    "paintings_intro": "Recent work. All paintings are for sale; please get in touch to arrange viewing, payment and delivery.",
+    "paintings": [
+        {
+            "title": "Dancing in the Garden",
+            "medium": "",
+            "image": "/img/dancing-in-the-garden.jpg"
+        },
+        {
+            "title": "Evening Swim",
+            "medium": "",
+            "image": "/img/evening-swim.jpg"
+        },
+        {
+            "title": "The Lit Window",
+            "medium": "",
+            "image": "/img/the-lit-window.jpg"
+        },
+        {
+            "title": "On the Terrace",
+            "medium": "",
+            "image": "/img/on-the-terrace.jpg"
+        },
+        {
+            "title": "A Hurried Meal",
+            "medium": "Oil, 48 × 61 cm · £2,200",
+            "image": "/img/a-hurried-meal.jpg"
+        },
+        {
+            "title": "Corridor",
+            "medium": "Oil, 61 × 46 cm · £2,000",
+            "image": "/img/corridor.jpg"
+        },
+        {
+            "title": "Man on a Stool",
+            "medium": "",
+            "image": "/img/man-on-a-stool.jpg"
+        },
+        {
+            "title": "Hands on His Shoulders",
+            "medium": "",
+            "image": "/img/hands-on-his-shoulders.jpg"
+        },
+        {
+            "title": "Two Faces",
+            "medium": "",
+            "image": "/img/two-faces.jpg"
+        },
+        {
+            "title": "The Haircut",
+            "medium": "",
+            "image": "/img/the-haircut.jpg"
+        },
+        {
+            "title": "Under the Arches",
+            "medium": "",
+            "image": "/img/under-the-arches.jpg"
+        },
+        {
+            "title": "The White Bird",
+            "medium": "",
+            "image": "/img/the-white-bird.jpg"
+        },
+        {
+            "title": "The Whisper",
+            "medium": "",
+            "image": "/img/the-whisper.jpg"
+        },
+        {
+            "title": "The Balcony",
+            "medium": "",
+            "image": "/img/the-balcony.jpg"
+        },
+        {
+            "title": "Gym",
+            "medium": "Oil, 61 × 46 cm",
+            "image": "/img/gym.jpg"
+        },
+        {
+            "title": "Gardeners",
+            "medium": "Oil, 61 × 44 cm · £2,000",
+            "image": "/img/gardeners.jpg"
+        },
+        {
+            "title": "A Walk in Nature",
+            "medium": "Oil, 61 × 49 cm · £2,000",
+            "image": "/img/a-walk-in-nature.jpg"
+        },
+        {
+            "title": "On the Bus",
+            "medium": "Oil, 38 × 40 cm · £1,800",
+            "image": "/img/on-the-bus.jpg"
+        },
+        {
+            "title": "Head in the Hedgerow",
+            "medium": "",
+            "image": "/img/head-in-the-hedgerow.jpg"
+        },
+        {
+            "title": "In the Office",
+            "medium": "Oil, 46 × 61 cm · £2,000",
+            "image": "/img/in-the-office.jpg"
+        },
+        {
+            "title": "Two Skinny Lattes",
+            "medium": "Oil, 61 × 46 cm · £2,000",
+            "image": "/img/two-skinny-lattes.jpg"
+        },
+        {
+            "title": "Two People Waiting",
+            "medium": "",
+            "image": "/img/two-people-waiting.jpg"
+        },
+        {
+            "title": "A Swirl",
+            "medium": "Oil, 46 × 61 cm · £2,000",
+            "image": "/img/a-swirl.jpg"
+        },
+        {
+            "title": "The Land of the Lizard",
+            "medium": "Oil, 51 × 61 cm · £2,500",
+            "image": "/img/the-land-of-the-lizard.jpg"
+        },
+        {
+            "title": "The Garden in Chelsea",
+            "medium": "Oil, 61 × 46 cm · £2,400",
+            "image": "/img/the-garden-in-chelsea.jpg"
+        },
+        {
+            "title": "Chopsticks",
+            "medium": "Oil, 61 × 46 cm · £2,400",
+            "image": "/img/chopsticks.jpg"
+        },
+        {
+            "title": "Conversation",
+            "medium": "",
+            "image": "/img/conversation.jpg"
+        },
+        {
+            "title": "On the Bench",
+            "medium": "",
+            "image": "/img/on-the-bench.jpg"
+        },
+        {
+            "title": "Ice Cream",
+            "medium": "",
+            "image": "/img/ice-cream.jpg"
+        },
+        {
+            "title": "Reading Under the Tree",
+            "medium": "",
+            "image": "/img/reading-under-the-tree.jpg"
+        },
+        {
+            "title": "On the Sofa",
+            "medium": "",
+            "image": "/img/on-the-sofa.jpg"
+        },
+        {
+            "title": "The Embrace",
+            "medium": "",
+            "image": "/img/the-embrace.jpg"
+        },
+        {
+            "title": "The Dog",
+            "medium": "",
+            "image": "/img/the-dog.jpg"
+        },
+        {
+            "title": "The Promenade",
+            "medium": "",
+            "image": "/img/the-promenade.jpg"
+        },
+        {
+            "title": "The Red House",
+            "medium": "",
+            "image": "/img/the-red-house.jpg"
+        },
+        {
+            "title": "A Wild Place",
+            "medium": "Oil, 61 × 46 cm · £2,000",
+            "image": "/img/a-wild-place.jpg"
+        },
+        {
+            "title": "Asleep",
+            "medium": "",
+            "image": "/img/asleep.jpg"
+        },
+        {
+            "title": "Clearing the Ruin",
+            "medium": "",
+            "image": "/img/clearing-the-ruin.jpg"
+        },
+        {
+            "title": "Woman in Red",
+            "medium": "",
+            "image": "/img/woman-in-red.jpg"
+        },
+        {
+            "title": "Eating a Peach",
+            "medium": "",
+            "image": "/img/eating-a-peach.jpg"
+        }
+    ],
+    "drawings_intro": "Ink and brush drawings, shown at the Works on Paper Fair.",
+    "drawings": [],
+    "about_lede": "The pictures are inventions, or reinventions of reality. Sometimes they may appear a little awkward and strange, but it is their awkwardness that gives them the power to communicate.",
+    "about_text": "Richard Sorrell was born in 1948, the son of the historical draughtsman and painter Alan Sorrell and the watercolourist Elizabeth Sorrell. He studied at Walthamstow Art School, Kingston College of Art and the Royal Academy Schools.\n\nFor around 25 years, living in London and Norfolk, he painted landscape, still life and portraits, and became known for aerial views of great houses for the National Trust and private owners. Over the past two decades the invented paintings have come to the fore, alongside an interest in sculpture, gardens and planting.\n\nHe was elected to the Royal Watercolour Society in 1975 and served as its President from 2006 to 2009.",
+    "societies": [
+        {
+            "name": "Royal Watercolour Society",
+            "note": "President 2006 to 2009"
+        },
+        {
+            "name": "Royal Society of British Artists",
+            "note": "de Laszlo Medal 2002"
+        },
+        {
+            "name": "New English Art Club"
+        },
+        {
+            "name": "Art Workers Guild"
+        },
+        {
+            "name": "Small Paintings Group"
+        }
+    ],
+    "exhibitions": [
+        {
+            "name": "Royal Academy Summer Exhibition",
+            "note": "since 1971"
+        },
+        {
+            "name": "Agnew's, London"
+        },
+        {
+            "name": "Hayward Gallery, Lutyens Exhibition"
+        },
+        {
+            "name": "Galleries Sternberg, Chicago"
+        },
+        {
+            "name": "Rainyday Gallery, Penzance"
+        }
+    ],
+    "collections": [
+        {
+            "name": "Victoria and Albert Museum"
+        },
+        {
+            "name": "The National Trust"
+        },
+        {
+            "name": "Museum of London"
+        },
+        {
+            "name": "The Courtauld Institute"
+        },
+        {
+            "name": "The Faringdon Collection"
+        }
+    ],
+    "films": [
+        {
+            "title": "Landscape and Figures",
+            "text": "From The Sunshine Painters and The Open Sky, two films by Stephen Gammond featuring Richard Sorrell.",
+            "url": "https://www.youtube.com/watch?v=PMdFaf_LvwY"
+        },
+        {
+            "title": "A Virtual Exhibition",
+            "text": "Richard introduces the idea behind showing his work online as an exhibition you can walk through.",
+            "url": "https://www.youtube.com/watch?v=s5n29ksD5f4"
+        }
+    ],
+    "phone": "07979 514 618",
+    "email": "sorrellr@aol.com",
+    "address": "Higher Hellangove Farm\nBadgers Cross, Gulval\nPenzance, Cornwall TR20 8XD"
 }

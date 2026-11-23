@@ -238,7 +238,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     if(!w||!w.image) return '';
     var id=slug(w.title,i);
     boxes.push('<div class="lb" id="'+id+'"><a class="x" href="#'+back+'">Close</a><figure><img src="'+esc(w.image)+'" alt="'+esc(w.title)+'" loading="lazy"><figcaption>'+esc(w.title)+(w.medium?'<span>'+esc(w.medium)+'</span>':'')+'</figcaption></figure></div>');
-    return '<div class="work"><a href="#'+id+'"><img src="'+esc(w.image)+'" alt="'+esc(w.title)+'" loading="lazy"></a><div class="cap"><b>'+esc(w.title)+'</b>'+(w.medium?'<span>'+esc(w.medium)+'</span>':'')+'</div></div>';
+    var sm=/^\/img\/[^\/]+$/.test(w.image)?w.image.replace('/img/','/img/sm/'):w.image;
+    return '<div class="work"><a href="#'+id+'"><img src="'+esc(sm)+'" data-full="'+esc(w.image)+'" onerror="if(this.dataset.full&&this.src.indexOf(this.dataset.full)<0){this.src=this.dataset.full}" alt="'+esc(w.title)+'" loading="lazy"></a><div class="cap"><b>'+esc(w.title)+'</b>'+(w.medium?'<span>'+esc(w.medium)+'</span>':'')+'</div></div>';
   }
   function list(items){return (items||[]).map(function(x){return '<li>'+esc(x.name)+(x.note?' <span>'+esc(x.note)+'</span>':'')+'</li>';}).join('');}
   fetch('/data/site.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(d){
@@ -284,6 +285,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     $('paintings-intro').textContent=d.paintings_intro||'';
     $('paintings-grid').innerHTML=(d.paintings||[]).map(function(w,i){return work(w,'p'+i,'paintings');}).join('');
     $('drawings-intro').textContent=d.drawings_intro||'';
+    if(!(d.drawings||[]).length){$('drawings').style.display='none';var dl=document.querySelector('nav a[href="#drawings"]');if(dl)dl.style.display='none';}
     $('drawings-grid').innerHTML=(d.drawings||[]).map(function(w,i){return work(w,'d'+i,'drawings');}).join('');
     $('about-lede').textContent=d.about_lede||'';
     $('about-text').innerHTML=paras(d.about_text);
