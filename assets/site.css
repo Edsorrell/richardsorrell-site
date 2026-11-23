@@ -226,3 +226,19 @@ body.lbx-open{overflow:hidden}
   .lbx .arrow{top:0;bottom:0;padding:0 10px;font-size:24px}
   .lbx .prev{left:0}.lbx .next{right:0}
 }
+
+/* Carousel */
+.lbx .stage{display:block;overflow:hidden;padding:0;cursor:grab;user-select:none;-webkit-user-select:none}
+.lbx .stage:active{cursor:grabbing}
+.lbx .track{position:absolute;top:0;bottom:0;left:0;display:flex;will-change:transform}
+.lbx .slide{flex:0 0 auto;height:100%;display:flex;align-items:center;justify-content:center;padding:64px 20px;opacity:.28;transform:scale(.92);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
+.lbx .slide.on{opacity:1;transform:none}
+.lbx .slide img{max-width:100%;max-height:calc(100vh - 128px);width:auto;height:auto;object-fit:contain;box-shadow:0 1px 2px rgba(0,0,0,.06),0 12px 40px rgba(0,0,0,.08);pointer-events:none}
+.lbx .arrow{z-index:2}
+@media (max-width:900px){
+  .lbx .stage{height:64vh;min-height:0}
+  .lbx .slide{padding:52px 8px 16px}
+  .lbx .slide img{max-height:calc(64vh - 68px)}
+}
+.lbx .x:focus{outline:none}
+.lbx .x:focus-visible{outline:1px solid var(--ink);outline-offset:2px}
