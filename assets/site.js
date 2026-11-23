@@ -177,7 +177,7 @@
     var dr=(d.drawings||[]).filter(function(w){return w&&w.image;});
     if(dr.length){register('drawings',dr);$('drawings').style.display='';$('drawings-intro').textContent=d.drawings_intro||'';
       $('drawings-grid').innerHTML=dr.map(function(w,i){return card(w,'drawings',i,true);}).join('');}
-    var tel=String(d.phone||'').replace(/[^0-9+]/g,'').replace(/^0/,'+44');
+    var tel=String(d.phone||'').replace(/\(0\)/g,'').replace(/[^0-9+]/g,'').replace(/^0/,'+44');
     $('contact-line').innerHTML='To buy a painting or arrange a studio visit, call <a href="tel:'+esc(tel)+'">'+esc(d.phone)+'</a> or email <a href="mailto:'+esc(d.email)+'">'+esc(d.email)+'</a>';
     $('address').innerHTML=esc(d.address).replace(/\n/g,'<br>');
   }
