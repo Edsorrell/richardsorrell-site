@@ -1,0 +1,244 @@
+{
+    "intro": "A selection of exhibitions since 1975. Richard shows regularly with the London art societies and with galleries across Britain.",
+    "regular": [
+        {
+            "name": "Royal Academy Summer Exhibition",
+            "note": "since 1971"
+        },
+        {
+            "name": "Royal Watercolour Society",
+            "note": "since 1975"
+        },
+        {
+            "name": "Royal Society of British Artists",
+            "note": "since 1985, featured artist 1993"
+        },
+        {
+            "name": "New English Art Club",
+            "note": "since 1995"
+        },
+        {
+            "name": "Small Paintings Group",
+            "note": ""
+        }
+    ],
+    "shows": [
+        {
+            "year": "2019",
+            "title": "Things I Have Noticed",
+            "venue": "Panter & Hall, London",
+            "solo": true,
+            "link": ""
+        },
+        {
+            "year": "2019",
+            "title": "",
+            "venue": "The Table Gallery, Hay-on-Wye",
+            "solo": true,
+            "link": ""
+        },
+        {
+            "year": "2019",
+            "title": "",
+            "venue": "Jerram Gallery, Sherborne",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "2018",
+            "title": "BREXhibITion",
+            "venue": "Bankside Gallery, London",
+            "solo": true,
+            "link": ""
+        },
+        {
+            "year": "2017",
+            "title": "",
+            "venue": "Wolfson College, Cambridge",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "2010–12",
+            "title": "",
+            "venue": "Petleys Gallery",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "2010",
+            "title": "",
+            "venue": "Rowley Fine Art, Winchester",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "2010",
+            "title": "",
+            "venue": "Fosse Gallery, Stow-on-the-Wold",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "2009",
+            "title": "",
+            "venue": "Rainyday Gallery, Penzance",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "2008",
+            "title": "",
+            "venue": "Chappel Galleries, Essex",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "2003",
+            "title": "",
+            "venue": "Galleries Sternberg, Chicago",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "2003, 2007",
+            "title": "",
+            "venue": "Alpha House Gallery, Sherborne",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "2003",
+            "title": "",
+            "venue": "Alresford Gallery",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "2002–06",
+            "title": "",
+            "venue": "Art in Action",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "2002–03",
+            "title": "",
+            "venue": "Guildford Arts (Mill Gallery)",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1997–99",
+            "title": "",
+            "venue": "Langham Fine Art",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1997",
+            "title": "",
+            "venue": "Thompson's Gallery, Stow-on-the-Wold and Marylebone",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1997",
+            "title": "",
+            "venue": "Leamington Spa Art Gallery, with Edmund Fairfax-Lucy",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1996–2008",
+            "title": "",
+            "venue": "Manor House Gallery, Chipping Norton",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1996",
+            "title": "",
+            "venue": "Llewellyn Alexander Gallery, London",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1996",
+            "title": "",
+            "venue": "Kentmere House Gallery, York",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1996",
+            "title": "",
+            "venue": "The Old Workshop Gallery, Norfolk",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1994, 1996",
+            "title": "",
+            "venue": "Lynn Strover Gallery, Cambridge",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1992",
+            "title": "",
+            "venue": "Cadogan Gallery, London",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1981–93",
+            "title": "",
+            "venue": "Agnew's, London",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1980",
+            "title": "Lutyens",
+            "venue": "Hayward Gallery, London",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1978",
+            "title": "",
+            "venue": "Beecroft Art Gallery, Southend-on-Sea",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "1975",
+            "title": "",
+            "venue": "DLI Museum and Art Gallery, Durham",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "",
+            "title": "",
+            "venue": "Woodgates Gallery, East Bergholt",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "",
+            "title": "",
+            "venue": "Brian Sinfield Gallery",
+            "solo": false,
+            "link": ""
+        },
+        {
+            "year": "",
+            "title": "",
+            "venue": "Sheen Gallery",
+            "solo": false,
+            "link": ""
+        }
+    ]
+}

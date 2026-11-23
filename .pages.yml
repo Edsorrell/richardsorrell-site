@@ -4,19 +4,30 @@ media:
 
 content:
   - name: site
-    label: Website
+    label: Home and paintings
     type: file
     path: data/site.json
     fields:
       - { name: headline, label: Headline, type: string }
       - { name: intro, label: Intro text, type: text }
       - name: hero
-        label: Main painting (top of page)
+        label: Full-width painting (top of page)
         type: object
         fields:
           - { name: title, label: Title, type: string }
-          - { name: medium, label: Medium, type: string }
+          - { name: year, label: Year (optional), type: string }
+          - { name: medium, label: Medium (e.g. Oil on board), type: string }
+          - { name: size, label: Size (e.g. 61 × 46 cm), type: string }
           - { name: image, label: Image, type: image }
+      - name: news
+        label: News (shown near the top of the home page; leave empty to hide)
+        type: object
+        list: true
+        fields:
+          - { name: date, label: Date (e.g. May 2027), type: string }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: link, label: Link (optional), type: string }
       - { name: paintings_heading, label: Paintings heading, type: string }
       - { name: paintings_intro, label: Paintings intro, type: text }
       - name: paintings
@@ -25,28 +36,20 @@ content:
         list: true
         fields:
           - { name: title, label: Title, type: string }
-          - { name: medium, label: Medium (optional), type: string }
           - { name: image, label: Image, type: image }
-      - { name: drawings_intro, label: Drawings intro, type: text }
-      - name: drawings
-        label: Drawings
-        type: object
-        list: true
-        fields:
-          - { name: title, label: Title, type: string }
-          - { name: medium, label: Medium (optional), type: string }
-          - { name: image, label: Image, type: image }
+          - { name: year, label: Year (optional), type: string }
+          - { name: medium, label: Medium (e.g. Oil on board), type: string }
+          - { name: size, label: Size (e.g. 61 × 46 cm), type: string }
+          - { name: price, label: Price unframed in £ (numbers only; leave empty to hide), type: number }
+          - { name: framed_price, label: Price framed in £ (optional), type: number }
+          - { name: sold, label: Sold, type: boolean }
+          - { name: note, label: A few words about the painting (optional), type: text }
+      - { name: framing_note, label: Framing note, type: text }
+      - { name: delivery_note, label: Delivery note, type: text }
       - { name: about_lede, label: About (large quote), type: text }
       - { name: about_text, label: About (biography), type: text }
       - name: societies
         label: Societies
-        type: object
-        list: true
-        fields:
-          - { name: name, label: Name, type: string }
-          - { name: note, label: Note (optional), type: string }
-      - name: exhibitions
-        label: Exhibitions
         type: object
         list: true
         fields:
@@ -60,7 +63,7 @@ content:
           - { name: name, label: Name, type: string }
           - { name: note, label: Note (optional), type: string }
       - name: films
-        label: Films
+        label: Films and talks
         type: object
         list: true
         fields:
@@ -70,3 +73,54 @@ content:
       - { name: phone, label: Phone, type: string }
       - { name: email, label: Email, type: string }
       - { name: address, label: Studio address, type: text }
+
+  - name: exhibitions
+    label: Exhibitions
+    type: file
+    path: data/exhibitions.json
+    fields:
+      - { name: intro, label: Intro, type: text }
+      - name: regular
+        label: Regular exhibitions (societies)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: note, label: Note (e.g. since 1971), type: string }
+      - name: shows
+        label: Exhibitions (newest first)
+        type: object
+        list: true
+        fields:
+          - { name: year, label: Year, type: string }
+          - { name: title, label: Exhibition title (optional), type: string }
+          - { name: venue, label: Gallery and town, type: string }
+          - { name: solo, label: Solo show, type: boolean }
+          - { name: link, label: Link (optional), type: string }
+
+  - name: archive
+    label: Archive
+    type: file
+    path: data/archive.json
+    fields:
+      - { name: intro, label: Intro, type: text }
+      - name: series
+        label: Series
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Series title, type: string }
+          - { name: years, label: Years (e.g. 1975–1995), type: string }
+          - { name: intro, label: A paragraph about this period, type: text }
+          - name: works
+            label: Works
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: image, label: Image, type: image }
+              - { name: year, label: Year, type: string }
+              - { name: medium, label: Medium, type: string }
+              - { name: size, label: Size, type: string }
+              - { name: note, label: Note (e.g. National Trust collection), type: string }
+              - { name: sold, label: Sold or in a collection, type: boolean }

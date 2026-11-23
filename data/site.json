@@ -3,7 +3,9 @@
     "intro": "Paintings and drawings built from sketches, memory and the process of painting itself. Made in a studio in West Cornwall.",
     "hero": {
         "title": "Starlings",
-        "medium": "Acrylic, 20 × 22 cm",
+        "year": "",
+        "medium": "Acrylic",
+        "size": "20 × 22 cm",
         "image": "/img/starlings.jpg"
     },
     "paintings_heading": "Landscape and figures",
@@ -11,207 +13,445 @@
     "paintings": [
         {
             "title": "Dancing in the Garden",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/dancing-in-the-garden.jpg"
         },
         {
             "title": "Evening Swim",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/evening-swim.jpg"
         },
         {
             "title": "The Lit Window",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/the-lit-window.jpg"
         },
         {
             "title": "On the Terrace",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/on-the-terrace.jpg"
         },
         {
             "title": "Biting a Burger",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/a-hurried-meal.jpg"
         },
         {
             "title": "Corridor",
-            "medium": "Oil, 61 × 46 cm · £2,000",
+            "year": "",
+            "medium": "Oil",
+            "size": "61 × 46 cm",
+            "price": 2000,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/corridor.jpg"
         },
         {
             "title": "Man on a Stool",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/man-on-a-stool.jpg"
         },
         {
             "title": "Hands on His Shoulders",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/hands-on-his-shoulders.jpg"
         },
         {
             "title": "Two Faces",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/two-faces.jpg"
         },
         {
             "title": "The Haircut",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/the-haircut.jpg"
         },
         {
             "title": "Under the Arches",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/under-the-arches.jpg"
         },
         {
             "title": "The White Bird",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/the-white-bird.jpg"
         },
         {
             "title": "The Whisper",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/the-whisper.jpg"
         },
         {
             "title": "The Balcony",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/the-balcony.jpg"
         },
         {
             "title": "Gym",
-            "medium": "Oil, 61 × 46 cm",
+            "year": "",
+            "medium": "Oil",
+            "size": "61 × 46 cm",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/gym.jpg"
         },
         {
             "title": "Gardeners",
-            "medium": "Oil, 61 × 44 cm · £2,000",
+            "year": "",
+            "medium": "Oil",
+            "size": "61 × 44 cm",
+            "price": 2000,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/gardeners.jpg"
         },
         {
             "title": "A Walk in Nature",
-            "medium": "Oil, 61 × 49 cm · £2,000",
+            "year": "",
+            "medium": "Oil",
+            "size": "61 × 49 cm",
+            "price": 2000,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/a-walk-in-nature.jpg"
         },
         {
             "title": "On the Bus",
-            "medium": "Oil, 38 × 40 cm · £1,800",
+            "year": "",
+            "medium": "Oil",
+            "size": "38 × 40 cm",
+            "price": 1800,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/on-the-bus.jpg"
         },
         {
             "title": "Head in the Hedgerow",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/head-in-the-hedgerow.jpg"
         },
         {
             "title": "In the Office",
-            "medium": "Oil, 46 × 61 cm · £2,000",
+            "year": "",
+            "medium": "Oil",
+            "size": "46 × 61 cm",
+            "price": 2000,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/in-the-office.jpg"
         },
         {
             "title": "Two Skinny Lattes",
-            "medium": "Oil, 61 × 46 cm · £2,000",
+            "year": "",
+            "medium": "Oil",
+            "size": "61 × 46 cm",
+            "price": 2000,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/two-skinny-lattes.jpg"
         },
         {
             "title": "Two People Waiting",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/two-people-waiting.jpg"
         },
         {
             "title": "A Swirl",
-            "medium": "Oil, 46 × 61 cm · £2,000",
+            "year": "",
+            "medium": "Oil",
+            "size": "46 × 61 cm",
+            "price": 2000,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/a-swirl.jpg"
         },
         {
             "title": "The Land of the Lizard",
-            "medium": "Oil, 51 × 61 cm · £2,500",
+            "year": "",
+            "medium": "Oil",
+            "size": "51 × 61 cm",
+            "price": 2500,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/the-land-of-the-lizard.jpg"
         },
         {
             "title": "The Garden in Chelsea",
-            "medium": "Oil, 61 × 46 cm · £2,400",
+            "year": "",
+            "medium": "Oil",
+            "size": "61 × 46 cm",
+            "price": 2400,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/the-garden-in-chelsea.jpg"
         },
         {
             "title": "Chopsticks",
-            "medium": "Oil, 61 × 46 cm · £2,400",
+            "year": "",
+            "medium": "Oil",
+            "size": "61 × 46 cm",
+            "price": 2400,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/chopsticks.jpg"
         },
         {
             "title": "Conversation",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/conversation.jpg"
         },
         {
             "title": "On the Bench",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/on-the-bench.jpg"
         },
         {
             "title": "Ice Cream",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/ice-cream.jpg"
         },
         {
             "title": "Reading Under the Tree",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/reading-under-the-tree.jpg"
         },
         {
             "title": "On the Sofa",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/on-the-sofa.jpg"
         },
         {
             "title": "The Embrace",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/the-embrace.jpg"
         },
         {
             "title": "The Dog",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/the-dog.jpg"
         },
         {
             "title": "The Promenade",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/the-promenade.jpg"
         },
         {
             "title": "The Red House",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/the-red-house.jpg"
         },
         {
             "title": "A Wild Place",
-            "medium": "Oil, 61 × 46 cm · £2,000",
+            "year": "",
+            "medium": "Oil",
+            "size": "61 × 46 cm",
+            "price": 2000,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/a-wild-place.jpg"
         },
         {
             "title": "Asleep",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/asleep.jpg"
         },
         {
             "title": "Clearing the Ruin",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/clearing-the-ruin.jpg"
         },
         {
             "title": "Woman in Red",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/woman-in-red.jpg"
         },
         {
             "title": "Eating a Peach",
+            "year": "",
             "medium": "",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
             "image": "/img/eating-a-peach.jpg"
         }
     ],
-    "drawings_intro": "Ink and brush drawings, shown at the Works on Paper Fair.",
-    "drawings": [],
     "about_lede": "The pictures are inventions, or reinventions of reality. Sometimes they may appear a little awkward and strange, but it is their awkwardness that gives them the power to communicate.",
     "about_text": "Richard Sorrell was born in 1948, the son of the historical draughtsman and painter Alan Sorrell and the watercolourist Elizabeth Sorrell. He studied at Walthamstow Art School, Kingston College of Art and the Royal Academy Schools.\n\nFor around 25 years, living in London and Norfolk, he painted landscape, still life and portraits, and became known for aerial views of great houses for the National Trust and private owners. Over the past two decades the invented paintings have come to the fore, alongside an interest in sculpture, gardens and planting.\n\nHe was elected to the Royal Watercolour Society in 1975 and served as its President from 2006 to 2009.",
     "societies": [
@@ -231,24 +471,6 @@
         },
         {
             "name": "Small Paintings Group"
-        }
-    ],
-    "exhibitions": [
-        {
-            "name": "Royal Academy Summer Exhibition",
-            "note": "since 1971"
-        },
-        {
-            "name": "Agnew's, London"
-        },
-        {
-            "name": "Hayward Gallery, Lutyens Exhibition"
-        },
-        {
-            "name": "Galleries Sternberg, Chicago"
-        },
-        {
-            "name": "Rainyday Gallery, Penzance"
         }
     ],
     "collections": [
@@ -282,5 +504,8 @@
     ],
     "phone": "07979 514 618",
     "email": "sorrellr@aol.com",
-    "address": "Higher Hellangove Farm\nBadgers Cross, Gulval\nPenzance, Cornwall TR20 8XD"
+    "address": "Higher Hellangove Farm\nBadgers Cross, Gulval\nPenzance, Cornwall TR20 8XD",
+    "news": [],
+    "delivery_note": "Delivery can be arranged in the UK and abroad. The cost depends on the size of the painting and where it is going, and is confirmed when you enquire.",
+    "framing_note": "Where a framed price is shown, the painting can be bought framed or unframed."
 }

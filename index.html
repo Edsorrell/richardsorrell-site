@@ -3,162 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Richard Sorrell · Painter</title>
-<meta name="description" content="Richard Sorrell PPRWS RBA NEAC. Invented paintings and drawings from a studio in West Cornwall.">
+<title>Richard Sorrell PPRWS RBA NEAC · Painter, West Cornwall</title>
+<meta name="description" content="Richard Sorrell PPRWS RBA NEAC, painter. Invented paintings made from memory and imagination in a studio in West Cornwall.">
+<link rel="canonical" href="https://richardsorrell.co.uk/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Richard Sorrell">
+<meta property="og:title" content="Richard Sorrell PPRWS RBA NEAC · Painter, West Cornwall">
+<meta property="og:description" content="Richard Sorrell PPRWS RBA NEAC, painter. Invented paintings made from memory and imagination in a studio in West Cornwall.">
+<meta property="og:url" content="https://richardsorrell.co.uk/">
+<meta property="og:image" content="https://richardsorrell.co.uk/img/starlings.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<style>
-:root{
-  --paper:#f3f0e9; --ink:#1c1b19; --mute:#77736b; --rule:#d8d3c8;
-  --sans:"Instrument Sans",system-ui,sans-serif; --serif:"Instrument Serif",Georgia,serif;
-  --pad:clamp(20px,5vw,72px);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
-img{display:block;width:100%;height:auto}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1360px;margin:0 auto;padding:0 var(--pad)}
-
-/* Header */
-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid transparent}
-.bar{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding-block:22px}
-.mark{font:500 15px/1 var(--sans);letter-spacing:.02em}
-.mark span{color:var(--mute);font-weight:400;margin-left:10px}
-nav{display:flex;gap:28px;font-size:14px}
-nav a{color:var(--mute);transition:color .2s}
-nav a:hover{color:var(--ink)}
-
-/* Hero */
-.hero{display:grid;grid-template-columns:5fr 7fr;gap:var(--pad);align-items:end;padding-top:clamp(48px,9vw,120px);padding-bottom:clamp(56px,8vw,112px)}
-.hero h1{font:400 clamp(44px,6.4vw,96px)/.98 var(--serif);letter-spacing:-.01em;text-wrap:balance}
-.hero h1 em{font-style:italic}
-.hero p{margin-top:28px;max-width:34ch;color:var(--mute);font-size:17px}
-.hero figure figcaption{margin-top:12px}
-.cap{display:flex;justify-content:space-between;font-size:13px;color:var(--mute)}
-.cap b{font-weight:500;color:var(--ink)}
-
-/* Sections */
-section{padding:clamp(56px,8vw,112px) 0;border-top:1px solid var(--rule)}
-.head{display:grid;grid-template-columns:5fr 7fr;gap:var(--pad);margin-bottom:clamp(36px,5vw,64px)}
-.label{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
-.head h2{font:400 clamp(32px,3.6vw,52px)/1.05 var(--serif)}
-.head p{color:var(--mute);max-width:52ch;margin-top:14px}
-
-/* Gallery */
-.gallery{columns:3;column-gap:clamp(20px,3vw,44px)}
-.gallery.two{columns:2}
-.work{break-inside:avoid;margin-bottom:clamp(32px,4vw,56px)}
-.work a{display:block}
-.work img{transition:opacity .3s}
-.work a:hover img{opacity:.88}
-.work .cap{margin-top:12px}
-
-/* Lightbox (CSS only) */
-.lb{position:fixed;inset:0;z-index:50;background:rgba(243,240,233,.97);display:none;place-items:center;padding:var(--pad)}
-.lb:target{display:grid}
-.lb figure{max-width:min(1000px,100%);width:100%}
-.lb img{max-height:78vh;width:auto;max-width:100%;margin:0 auto}
-.lb figcaption{text-align:center;margin-top:16px;font-size:14px}
-.lb figcaption span{display:block;color:var(--mute);font-size:13px;margin-top:2px}
-.lb .x{position:absolute;top:22px;right:var(--pad);font-size:14px;color:var(--mute)}
-.lb .x:hover{color:var(--ink)}
-
-/* About */
-.about{display:grid;grid-template-columns:5fr 7fr;gap:var(--pad)}
-.about .lede{font:400 clamp(24px,2.4vw,34px)/1.25 var(--serif)}
-.about .body p+p{margin-top:1.1em}
-.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px);margin-top:clamp(48px,6vw,80px)}
-.facts h3{font:500 13px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding-bottom:12px;border-bottom:1px solid var(--rule);margin-bottom:14px}
-.facts li{list-style:none;font-size:15px;padding:5px 0}
-.facts li span{color:var(--mute)}
-
-/* Film */
-.film{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,3vw,44px)}
-.film a{display:block;border-top:1px solid var(--ink);padding-top:16px}
-.film h3{font:400 26px/1.15 var(--serif)}
-.film p{color:var(--mute);font-size:15px;margin-top:8px;max-width:44ch}
-.film .go{display:inline-block;margin-top:14px;font-size:14px}
-
-/* Contact */
-.contact{display:grid;grid-template-columns:5fr 7fr;gap:var(--pad)}
-.contact .big{font:400 clamp(30px,3.6vw,52px)/1.1 var(--serif)}
-.contact .big a{border-bottom:1px solid var(--rule);white-space:nowrap}
-.contact .big a:hover{border-color:var(--ink)}
-.addr{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px;font-size:15px}
-.addr div span{display:block;color:var(--mute);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
-
-footer{border-top:1px solid var(--rule);padding:28px 0 40px;font-size:13px;color:var(--mute)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-@media (max-width:900px){
-  .hero,.head,.about,.contact{grid-template-columns:1fr}
-  .hero{gap:40px}
-  .gallery{columns:2}
-  .facts{grid-template-columns:1fr}
-}
-@media (max-width:600px){
-  .bar{flex-direction:column;align-items:flex-start;gap:14px;padding-block:16px}
-  nav{gap:20px;font-size:13px}
-  .gallery,.gallery.two{columns:1}
-  .film,.addr{grid-template-columns:1fr}
-  .lb .x{top:16px}
-}
-/* Full-bleed hero variant */
-.bleed{position:relative;overflow:clip;background:#3b3a36}
-.bleed>img{display:block;width:100%;height:auto}
-.bleed::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,19,17,.5) 0%,rgba(20,19,17,.24) 38%,rgba(20,19,17,0) 65%);pointer-events:none}
-.bleed .copy{position:absolute;inset:0;z-index:1;pointer-events:none}
-.bleed .wrap{height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:20.6px;color:#fff}
-.bleed .glide{will-change:transform}
-.bleed h1 .wd{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
-.bleed h1 .wd>span{display:inline-block}
-.bleed .glide{visibility:hidden}
-.bleed.ready .glide{visibility:visible}
-@media (prefers-reduced-motion:no-preference){
-  .bleed.ready h1 .wd>span{animation:rsln 1.1s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.15s + var(--d) * .035s)}
-  .bleed.ready p#intro{animation:rsup 1s cubic-bezier(.2,.7,.2,1) both;animation-delay:.55s}
-  .bleed.ready .credit{animation:rsfade 1s ease both;animation-delay:.8s}
-}
-@keyframes rsln{from{transform:translateY(105%)}to{transform:none}}
-@keyframes rsup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-@keyframes rsfade{from{opacity:0}to{opacity:1}}
-.bleed h1{font:400 clamp(44px,6.4vw,96px)/.98 var(--serif);letter-spacing:-.01em;max-width:13ch;text-wrap:balance;text-shadow:0 1px 24px rgba(0,0,0,.18)}
-.bleed p{margin-top:24px;max-width:34ch;font-size:17px;color:rgba(255,255,255,.9)}
-.bleed .credit{position:absolute;right:var(--pad);bottom:22px;z-index:1;font-size:13px;line-height:1.6;color:rgba(255,255,255,.85)}
-.bleed .credit a{border-bottom:1px solid rgba(255,255,255,.4)}
-@media (max-width:600px){
-  .bleed>img{height:calc(100svh - 83px);min-height:480px;object-fit:cover}
-  .bleed::after{background:linear-gradient(0deg,rgba(20,19,17,.6) 0%,rgba(20,19,17,.2) 50%,rgba(20,19,17,0) 75%)}
-  .bleed .wrap{padding-bottom:64px}
-  .bleed .credit{left:var(--pad);right:auto}
-}
-</style>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Richard Sorrell", "honorificSuffix": "PPRWS RBA NEAC", "jobTitle": "Painter", "url": "https://richardsorrell.co.uk/", "birthDate": "1948", "address": {"@type": "PostalAddress", "addressRegion": "Cornwall", "addressCountry": "GB"}, "memberOf": ["Royal Watercolour Society", "Royal Society of British Artists", "New English Art Club"], "sameAs": ["https://en.wikipedia.org/wiki/Richard_Sorrell"]}</script>
 </head>
-<body>
+<body data-page="home">
 
 <header>
   <div class="wrap bar">
-    <a class="mark" href="#top">Richard Sorrell<span>PPRWS RBA NEAC</span></a>
+    <a class="mark" href="/">Richard Sorrell<span>PPRWS RBA NEAC</span></a>
     <nav>
-      <a href="#paintings">Paintings</a>
-      <a href="#drawings">Drawings</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="/#paintings" class="on">Paintings</a>
+      <a href="/archive" id="nav-archive" style="display:none">Archive</a>
+      <a href="/exhibitions">Exhibitions</a>
+      <a href="/about">About</a>
+      <a href="/#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
   <div class="bleed" id="hero">
-    <img id="hero-img" src="" alt="">
+    <img id="hero-img" src="/img/starlings.jpg" alt="Starlings">
     <div class="copy"><div class="wrap"><div class="glide">
-      <h1 id="headline"></h1>
-      <p id="intro"></p>
+      <h1 id="headline">Imagined, from a lifetime of looking.</h1>
+      <p id="intro">Paintings and drawings built from sketches, memory and the process of painting itself. Made in a studio in West Cornwall.</p>
     </div></div></div>
     <div class="credit"><a id="hero-credit" href="#top"></a></div>
   </div>
+
+  <section id="news" style="display:none">
+    <div class="wrap">
+      <div class="head"><div class="label">News</div><div></div></div>
+      <div class="news" id="news-list"></div>
+    </div>
+  </section>
 
   <section id="paintings">
     <div class="wrap">
@@ -166,44 +57,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="label">New Paintings</div>
         <div><h2 id="paintings-heading"></h2><p id="paintings-intro"></p></div>
       </div>
+      <div class="filter" id="filter" style="display:none"></div>
       <div class="gallery" id="paintings-grid"></div>
-    </div>
-  </section>
-
-  <section id="drawings">
-    <div class="wrap">
-      <div class="head">
-        <div class="label">Works on Paper</div>
-        <div><h2>Drawings</h2><p id="drawings-intro"></p></div>
-      </div>
-      <div class="gallery two" id="drawings-grid"></div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="wrap">
-      <div class="about">
-        <div class="label">About</div>
-        <div>
-          <p class="lede" id="about-lede"></p>
-          <div class="body" id="about-text" style="margin-top:32px;color:var(--mute);max-width:62ch"></div>
-        </div>
-      </div>
-      <div class="facts">
-        <div><h3>Societies</h3><ul id="societies"></ul></div>
-        <div><h3>Exhibitions</h3><ul id="exhibitions"></ul></div>
-        <div><h3>Collections</h3><ul id="collections"></ul></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="film">
-    <div class="wrap">
-      <div class="head">
-        <div class="label">Film and Talks</div>
-        <div><h2>In the studio</h2></div>
-      </div>
-      <div class="film" id="films"></div>
     </div>
   </section>
 
@@ -223,83 +78,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </section>
 </main>
 
-<footer><div class="wrap"><span>© Richard Sorrell</span><span>West Cornwall</span></div></footer>
-
-<div id="lightboxes"></div>
-
-<script>
-(function(){
-  var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
-  var slug=function(s,i){return 'w-'+(String(s||'work').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'work')+'-'+i;};
-  var $=function(id){return document.getElementById(id);};
-  var paras=function(t){return String(t||'').split(/\n\s*\n/).filter(Boolean).map(function(p){return '<p>'+esc(p).replace(/\n/g,'<br>')+'</p>';}).join('');};
-  var boxes=[];
-  function work(w,i,back){
-    if(!w||!w.image) return '';
-    var id=slug(w.title,i);
-    boxes.push('<div class="lb" id="'+id+'"><a class="x" href="#'+back+'">Close</a><figure><img src="'+esc(w.image)+'" alt="'+esc(w.title)+'" loading="lazy"><figcaption>'+esc(w.title)+(w.medium?'<span>'+esc(w.medium)+'</span>':'')+'</figcaption></figure></div>');
-    var sm=/^\/img\/[^\/]+$/.test(w.image)?w.image.replace('/img/','/img/sm/'):w.image;
-    return '<div class="work"><a href="#'+id+'"><img src="'+esc(sm)+'" data-full="'+esc(w.image)+'" onerror="if(this.dataset.full&&this.src.indexOf(this.dataset.full)<0){this.src=this.dataset.full}" alt="'+esc(w.title)+'" loading="lazy"></a><div class="cap"><b>'+esc(w.title)+'</b>'+(w.medium?'<span>'+esc(w.medium)+'</span>':'')+'</div></div>';
-  }
-  function list(items){return (items||[]).map(function(x){return '<li>'+esc(x.name)+(x.note?' <span>'+esc(x.note)+'</span>':'')+'</li>';}).join('');}
-  fetch('/data/site.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(d){
-    $('headline').textContent=d.headline||'';
-    $('intro').textContent=d.intro||'';
-    if(d.hero&&d.hero.image){
-      var hid=slug(d.hero.title,'h');
-      boxes.push('<div class="lb" id="'+hid+'"><a class="x" href="#top">Close</a><figure><img src="'+esc(d.hero.image)+'" alt="'+esc(d.hero.title)+'"><figcaption>'+esc(d.hero.title)+(d.hero.medium?'<span>'+esc(d.hero.medium)+'</span>':'')+'</figcaption></figure></div>');
-      var hi=$('hero-img');hi.src=d.hero.image;hi.alt=d.hero.title||'';
-      var hc=$('hero-credit');hc.textContent=d.hero.title||'';hc.href='#'+hid;
-    } else { $('hero').style.display='none'; }
-    (function(){
-      var h=$('headline'),words=(h.textContent||'').trim().split(/\s+/);
-      h.innerHTML=words.map(function(w,i){return '<span class="wd"><span style="--d:'+i+'">'+esc(w)+'</span></span>';}).join(' ');
-      var bleed=$('hero'),glide=bleed.querySelector('.glide'),img=$('hero-img');
-      var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var K=1,EASE=0.07,D=0,cur=null,raf=0;
-      function measure(){
-        glide.style.transform='none';
-        var vh=window.innerHeight,top=bleed.getBoundingClientRect().top+window.scrollY;
-        var B=Math.min(96,Math.max(40,window.innerWidth*0.07));
-        var restBottom=glide.getBoundingClientRect().bottom+window.scrollY-top;
-        var startBottom=(vh-B)-(top-0);
-        D=Math.max(0,restBottom-startBottom);
-        var sEnd=top+img.offsetHeight-vh;
-        K=sEnd>1?D/sEnd:1;
-      }
-      function target(){var s=window.scrollY;return -(D-Math.min(D,s*K));}
-      function frame(){
-        var t=target();
-        if(cur===null||reduce){cur=t;}else{cur+=(t-cur)*EASE;}
-        glide.style.transform='translate3d(0,'+cur.toFixed(2)+'px,0)';
-        raf=Math.abs(t-cur)>0.1?requestAnimationFrame(frame):0;
-      }
-      function kick(){if(!raf)raf=requestAnimationFrame(frame);}
-      function start(){measure();cur=null;frame();bleed.classList.add('ready');}
-      if(img.complete&&img.naturalWidth)start();else{img.addEventListener('load',start);img.addEventListener('error',start);}
-      window.addEventListener('scroll',kick,{passive:true});
-      window.addEventListener('resize',function(){measure();cur=null;frame();});
-      if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){measure();cur=null;frame();});
-    })();
-    $('paintings-heading').textContent=d.paintings_heading||'';
-    $('paintings-intro').textContent=d.paintings_intro||'';
-    $('paintings-grid').innerHTML=(d.paintings||[]).map(function(w,i){return work(w,'p'+i,'paintings');}).join('');
-    $('drawings-intro').textContent=d.drawings_intro||'';
-    if(!(d.drawings||[]).length){$('drawings').style.display='none';var dl=document.querySelector('nav a[href="#drawings"]');if(dl)dl.style.display='none';}
-    $('drawings-grid').innerHTML=(d.drawings||[]).map(function(w,i){return work(w,'d'+i,'drawings');}).join('');
-    $('about-lede').textContent=d.about_lede||'';
-    $('about-text').innerHTML=paras(d.about_text);
-    $('societies').innerHTML=list(d.societies);
-    $('exhibitions').innerHTML=list(d.exhibitions);
-    $('collections').innerHTML=list(d.collections);
-    $('films').innerHTML=(d.films||[]).map(function(f){return '<a href="'+esc(f.url)+'" target="_blank" rel="noopener"><h3>'+esc(f.title)+'</h3><p>'+esc(f.text)+'</p><span class="go">Watch on YouTube ↗</span></a>';}).join('');
-    var tel=String(d.phone||'').replace(/[^0-9+]/g,'').replace(/^0/,'+44');
-    $('contact-line').innerHTML='To buy a painting or arrange a studio visit, call <a href="tel:'+esc(tel)+'">'+esc(d.phone)+'</a> or email <a href="mailto:'+esc(d.email)+'">'+esc(d.email)+'</a>';
-    $('address').innerHTML=esc(d.address).replace(/\n/g,'<br>');
-    $('lightboxes').innerHTML=boxes.join('');
-    if(location.hash){var h=location.hash;location.hash='';location.hash=h;}
-  }).catch(function(){$('intro').textContent='Sorry, the gallery could not be loaded. Please refresh the page.';});
-})();
-</script>
+<p id="load-error" class="wrap small" style="display:none;padding:24px 0">Sorry, part of this page could not be loaded. Please refresh.</p>
+<footer><div class="wrap"><span>© Richard Sorrell · West Cornwall</span><a id="foot-email" href="mailto:sorrellr@aol.com">sorrellr@aol.com</a></div></footer>
+<script src="/assets/site.js"></script>
 </body>
 </html>
