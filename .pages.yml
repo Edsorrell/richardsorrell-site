@@ -11,11 +11,21 @@ content:
       - { name: headline, label: Headline, type: string }
       - { name: intro, label: Intro text, type: text }
       - name: hero
-        label: Top photo
+        label: Full-width painting (top of page)
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: year, label: Year (optional), type: string }
+          - { name: medium, label: Medium (e.g. Oil on board), type: string }
+          - { name: size, label: Size (e.g. 61 × 46 cm), type: string }
+          - { name: image, label: Image, type: image }
+      - name: welcome_photo
+        label: About Richard photo (below the painting)
         type: object
         fields:
           - { name: image, label: Photo, type: image }
           - { name: caption, label: Caption, type: string }
+      - { name: welcome_text, label: About Richard text (leave an empty line between paragraphs), type: text }
       - name: news
         label: News (shown near the top of the home page; leave empty to hide)
         type: object

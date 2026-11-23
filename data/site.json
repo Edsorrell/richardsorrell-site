@@ -2,23 +2,15 @@
     "headline": "Imagined, from a lifetime of looking.",
     "intro": "Paintings and drawings built from sketches, memory and the process of painting itself. Made in a studio in West Cornwall.",
     "hero": {
-        "image": "/img/studio.jpg",
-        "caption": "Richard in his studio, West Cornwall"
+        "title": "Starlings",
+        "year": "",
+        "medium": "Acrylic",
+        "size": "20 × 22 cm",
+        "image": "/img/starlings.jpg"
     },
     "paintings_heading": "Landscape and figures",
     "paintings_intro": "Recent work. All paintings are for sale; please get in touch to arrange viewing, payment and delivery.",
     "paintings": [
-        {
-            "title": "Starlings",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "20 × 22 cm",
-            "image": "/img/starlings.jpg",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": ""
-        },
         {
             "title": "Dancing in the Garden",
             "year": "",
@@ -515,5 +507,10 @@
     "address": "Higher Hellangove Farm\nBadgers Cross, Gulval\nPenzance, Cornwall TR20 8XD",
     "news": [],
     "delivery_note": "Delivery can be arranged in the UK and abroad. The cost depends on the size of the painting and where it is going, and is confirmed when you enquire.",
-    "framing_note": "Where a framed price is shown, the painting can be bought framed or unframed."
+    "framing_note": "Where a framed price is shown, the painting can be bought framed or unframed.",
+    "welcome_photo": {
+        "image": "/img/studio.jpg",
+        "caption": "Richard in his studio, West Cornwall"
+    },
+    "welcome_text": "Richard Sorrell was born in 1948 into a family of artists: his father was the draughtsman and painter Alan Sorrell, his mother the watercolourist Elizabeth Sorrell.\n\nAfter training at Kingston and the Royal Academy Schools, he spent some twenty-five years painting landscape, still life and aerial views of great houses for the National Trust. Today he paints invented pictures of people and places, from sketches, memory and imagination, in his studio near Penzance.\n\nHe is a past President of the Royal Watercolour Society, a member of the Royal Society of British Artists and the New English Art Club, and shows every year at the Royal Academy Summer Exhibition."
 }
