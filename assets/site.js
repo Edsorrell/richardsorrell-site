@@ -88,7 +88,7 @@
     return 'mailto:'+(SITE.email||'')+'?subject='+encodeURIComponent('Enquiry: '+w.title)+'&body='+encodeURIComponent(body.replace(',.','.'));
   }
   /* ---------- View in a room ---------- */
-  var roomOpen=false, roomKind='living';
+  var roomOpen=false, roomKind=null;
   function sizeCm(w){
     var m=String(w.size||'').match(/(\d+(?:\.\d+)?)\s*[×xX]\s*(\d+(?:\.\d+)?)\s*(cm|in|ins|inches|")?/);
     if(!m) return null;
@@ -99,50 +99,42 @@
     if(land===null) return {h:a,w:b};
     return land?{w:hi,h:lo}:{w:lo,h:hi};
   }
-  function roomSVG(w,kind,framed){
+  /* Real room photographs (Unsplash licence). Calibrated in photo pixels:
+     ppc = pixels per cm on the wall plane, cx = centre line, base = y of the
+     painting's lowest allowed edge, floor/eye = optional eye-level hanging. */
+  var ROOMS={
+    bedroom:{label:'Bedroom',img:'/img/rooms/chest.jpg',W:1460,H:975,ppc:5.7,cx:469,base:366,ref:'The chest of drawers is about 80 cm high.'},
+    living:{label:'Living room',img:'/img/rooms/mantel.jpg',W:1460,H:1800,ppc:8.0,cx:615,base:1170,ref:'The mantelpiece is about 1.5 m wide.'},
+    studio:{label:'Studio wall',img:'/img/rooms/studio.jpg',W:1460,H:974,ppc:2.58,cx:690,floor:707,ref:'The stool is about 1 m high.'}
+  };
+  function autoRoom(s){var m=Math.max(s.w,s.h);return m<=40?'bedroom':m<=80?'living':'studio';}
+  function roomScene(w,kind,framed){
     var s=sizeCm(w); if(!s) return '';
-    var W=420,H=260,F=228;
-    var fr=framed?5:0, pw=s.w, ph=s.h, ow=pw+fr*2, oh=ph+fr*2;
-    var base=kind==='living'?104:102, cy=Math.max(150,base+oh/2);
-    var x=W/2-ow/2, y=F-cy-oh/2;
-    var wall=kind==='living'?'#ece7dd':'#dcd8cc', floor=kind==='living'?'#cdbfa8':'#a98f74';
-    var g='<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(w.title)+' shown to scale in a '+(kind==='living'?'living room':'hallway')+'">'+
-      '<defs><filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="1.4" stdDeviation="1.6" flood-color="#000" flood-opacity=".28"/></filter>'+
-      '<linearGradient id="wl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+wall+'" stop-opacity=".86"/><stop offset="1" stop-color="'+wall+'"/></linearGradient>'+
-      '<linearGradient id="fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+floor+'"/><stop offset="1" stop-color="'+floor+'" stop-opacity=".8"/></linearGradient></defs>'+
-      '<rect width="'+W+'" height="'+F+'" fill="url(#wl)"/><rect y="'+F+'" width="'+W+'" height="'+(H-F)+'" fill="url(#fl)"/>'+
-      '<rect y="'+(F-9)+'" width="'+W+'" height="9" fill="#f6f2ea"/><rect y="'+(F-0.6)+'" width="'+W+'" height=".6" fill="#000" opacity=".08"/>';
-    if(kind==='living'){
-      g+='<g><rect x="104" y="'+(F-80)+'" width="212" height="46" rx="9" fill="#8b9384"/>'+
-        '<rect x="99" y="'+(F-46)+'" width="222" height="30" rx="6" fill="#7d8577"/>'+
-        '<rect x="93" y="'+(F-62)+'" width="24" height="46" rx="9" fill="#868e7f"/><rect x="303" y="'+(F-62)+'" width="24" height="46" rx="9" fill="#868e7f"/>'+
-        '<rect x="122" y="'+(F-70)+'" width="84" height="26" rx="7" fill="#959c8e"/><rect x="214" y="'+(F-70)+'" width="84" height="26" rx="7" fill="#959c8e"/>'+
-        '<rect x="104" y="'+(F-16)+'" width="4" height="16" fill="#5a4a3a"/><rect x="312" y="'+(F-16)+'" width="4" height="16" fill="#5a4a3a"/>'+
-        '<rect x="342" y="'+(F-55)+'" width="44" height="3" rx="1" fill="#6e5a46"/><rect x="362.5" y="'+(F-52)+'" width="3" height="52" fill="#6e5a46"/>'+
-        '<rect x="363" y="'+(F-90)+'" width="2" height="35" fill="#3d3a36"/><path d="M350 '+(F-90)+' L378 '+(F-90)+' L372 '+(F-110)+' L356 '+(F-110)+' Z" fill="#efe6d4" stroke="#d9cfbc" stroke-width=".6"/>'+
-        '<path d="M30 '+F+' L34 '+(F-34)+' L60 '+(F-34)+' L64 '+F+' Z" fill="#b5654a"/>'+
-        '<g fill="#6f7f5c"><ellipse cx="40" cy="'+(F-58)+'" rx="7" ry="22" transform="rotate(-18 40 '+(F-58)+')"/><ellipse cx="54" cy="'+(F-62)+'" rx="7" ry="26" transform="rotate(14 54 '+(F-62)+')"/><ellipse cx="47" cy="'+(F-70)+'" rx="6" ry="28"/></g></g>';
-    } else {
-      g+='<g><rect x="150" y="'+(F-80)+'" width="120" height="4" fill="#5c4a3a"/><rect x="152" y="'+(F-76)+'" width="116" height="16" fill="#6b5745"/>'+
-        '<rect x="155" y="'+(F-60)+'" width="3" height="60" fill="#5c4a3a"/><rect x="262" y="'+(F-60)+'" width="3" height="60" fill="#5c4a3a"/>'+
-        '<path d="M160 '+(F-80)+' q-6 -14 2 -26 h10 q8 12 2 26 Z" fill="#e7dfd0"/><g stroke="#6f7f5c" stroke-width="1.2" fill="none"><path d="M167 '+(F-106)+' q-8 -18 -4 -32"/><path d="M168 '+(F-106)+' q-2 -16 2 -24"/></g>'+
-        '<rect x="232" y="'+(F-86)+'" width="22" height="6" rx="1" fill="#b9a789"/><rect x="236" y="'+(F-92)+'" width="16" height="6" rx="1" fill="#8d9a95"/>'+
-        '<g stroke="#000" stroke-opacity=".06" stroke-width=".5">'+[0,1,2,3,4,5,6,7,8,9,10,11,12,13].map(function(i){return '<line x1="'+(i*32)+'" y1="'+F+'" x2="'+(i*32-12)+'" y2="'+H+'"/>';}).join('')+'</g></g>';
-    }
-    g+='<g filter="url(#sh)">';
-    if(fr) g+='<rect x="'+x+'" y="'+y+'" width="'+ow+'" height="'+oh+'" fill="#b08c60"/><rect x="'+(x+fr-0.6)+'" y="'+(y+fr-0.6)+'" width="'+(pw+1.2)+'" height="'+(ph+1.2)+'" fill="#7c6142"/>';
-    g+='<image href="'+esc(w.image)+'" x="'+(x+fr)+'" y="'+(y+fr)+'" width="'+pw+'" height="'+ph+'" preserveAspectRatio="none"/></g>';
-    g+='</svg>';
-    return g;
+    var R=ROOMS[kind], fr=framed?5:0, ow=(s.w+fr*2)*R.ppc, oh=(s.h+fr*2)*R.ppc, top;
+    if(R.floor!=null){var c=Math.max(150,110+(s.h+fr*2)/2);top=R.floor-c*R.ppc-oh/2;}
+    else top=R.base-oh;
+    var left=R.cx-ow/2, pc=function(v,t){return (v/t*100).toFixed(3)+'%';};
+    var sh=Math.max(1,R.ppc*0.5);
+    return '<div class="rv-ph" data-w="'+R.W+'" data-h="'+R.H+'"><img src="'+R.img+'" alt="">'+
+      '<div class="rv-art'+(fr?' fr':'')+'" style="left:'+pc(left,R.W)+';top:'+pc(top,R.H)+';width:'+pc(ow,R.W)+';height:'+pc(oh,R.H)+';padding:'+pc(fr*R.ppc,R.W)+';box-shadow:0 '+(sh*1.2).toFixed(1)+'px '+(sh*3).toFixed(1)+'px rgba(0,0,0,.28),0 '+(sh*.3).toFixed(1)+'px '+(sh*.6).toFixed(1)+'px rgba(0,0,0,.22)">'+
+      '<img src="'+esc(w.image)+'" alt="'+esc(w.title)+' on the wall"></div></div>';
   }
+  function fitRoom(){
+    if(!lb) return; var sc=lb.querySelector('.rv-scene'),ph=lb.querySelector('.rv-ph'); if(!sc||!ph) return;
+    var W=+ph.getAttribute('data-w'),H=+ph.getAttribute('data-h'),bw=sc.clientWidth,bh=sc.clientHeight-32,k=Math.min(bw/W,bh/H);
+    ph.style.width=Math.round(W*k)+'px'; ph.style.height=Math.round(H*k)+'px';
+  }
+  window.addEventListener('resize',function(){if(roomOpen)fitRoom();});
   function renderRoom(){
-    var g=groups[cur[0]], w=g[cur[1]], rv=lb.querySelector('.roomview');
+    var g=groups[cur[0]], w=g[cur[1]], rv=lb.querySelector('.roomview'), s=sizeCm(w);
     var framed=!!(w.framed_price&&choice==='framed');
-    var ref=roomKind==='living'?'The sofa is about 2.2 m wide.':'The table is 1.2 m wide.';
-    rv.innerHTML='<div class="rv-bar"><div class="rv-tabs" role="group" aria-label="Room"><button data-r="living" aria-pressed="'+(roomKind==='living')+'">Living room</button><button data-r="hall" aria-pressed="'+(roomKind==='hall')+'">Hallway</button></div><button class="rv-back">Back to painting</button></div>'+
-      '<div class="rv-scene">'+roomSVG(w,roomKind,framed)+'</div><p class="rv-note">'+esc(w.title)+(w.size?', '+esc(withInches(w.size)):'')+(framed?', framed':'')+', shown to scale. '+ref+'</p>';
+    if(!roomKind||!ROOMS[roomKind]) roomKind=autoRoom(s);
+    var R=ROOMS[roomKind];
+    rv.innerHTML='<div class="rv-bar"><div class="rv-tabs" role="group" aria-label="Room">'+Object.keys(ROOMS).map(function(k){return '<button data-r="'+k+'" aria-pressed="'+(roomKind===k)+'">'+ROOMS[k].label+'</button>';}).join('')+'</div><button class="rv-back">Back to painting</button></div>'+
+      '<div class="rv-scene">'+roomScene(w,roomKind,framed)+'</div><p class="rv-note">'+esc(w.title)+(w.size?', '+esc(withInches(w.size)):'')+(framed?', framed':'')+', shown approximately to scale. '+R.ref+'</p>';
     Array.prototype.forEach.call(rv.querySelectorAll('.rv-tabs button'),function(b){b.onclick=function(){roomKind=b.getAttribute('data-r');renderRoom();};});
     rv.querySelector('.rv-back').onclick=function(){setRoom(false);};
+    fitRoom();
   }
   function setRoom(on){
     roomOpen=on; lb.classList.toggle('room',on);
@@ -183,11 +175,11 @@
   function open(id){
     var r=ids[id]; if(!r) return;
     if(!lb) buildLB();
-    cur=r.slice(); choice='unframed';
+    cur=r.slice(); choice='unframed'; roomKind=null;
     lb.classList.add('open'); document.body.classList.add('lbx-open');
     show(); lb.querySelector('.x').focus({preventScroll:true});
   }
-  function step(d){if(roomOpen){roomOpen=false;lb.classList.remove('room');}var g=groups[cur[0]],n=cur[1]+d,wrap=n<0||n>=g.length;cur[1]=(n+g.length)%g.length;choice='unframed';show(!wrap);}
+  function step(d){roomKind=null;if(roomOpen){roomOpen=false;lb.classList.remove('room');}var g=groups[cur[0]],n=cur[1]+d,wrap=n<0||n>=g.length;cur[1]=(n+g.length)%g.length;choice='unframed';show(!wrap);}
   function close(){
     if(!lb) return;
     if(roomOpen){roomOpen=false;lb.classList.remove('room');}

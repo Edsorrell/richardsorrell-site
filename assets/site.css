@@ -254,7 +254,13 @@ body.lbx-open{overflow:hidden}
 .rv-tabs button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink)}
 .rv-back:hover,.rv-tabs button:hover{color:var(--ink)}
 .rv-scene{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:16px 0}
-.rv-scene svg{width:100%;height:100%;max-height:100%;display:block}
+.rv-scene{position:relative}
+.rv-ph{position:relative;overflow:hidden;background:#eee}
+.rv-ph>img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.rv-art{position:absolute;box-sizing:border-box;background:#7c6142}
+.rv-art.fr{background:#b08c60}
+.rv-art img{display:block;width:100%;height:100%;object-fit:fill;filter:brightness(.97)}
+.rv-art.fr img{outline:1px solid rgba(60,40,20,.5)}
 .rv-note{font-size:13px;color:var(--mute);text-align:center}
 @media (max-width:900px){
   .lbx .roomview{padding:16px 12px}
