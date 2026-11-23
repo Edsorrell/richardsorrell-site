@@ -103,11 +103,13 @@
      ppc = pixels per cm on the wall plane, cx = centre line, base = y of the
      painting's lowest allowed edge, floor/eye = optional eye-level hanging. */
   var ROOMS={
-    bedroom:{label:'Bedroom',img:'/img/rooms/chest.jpg',W:1460,H:975,ppc:5.7,cx:469,base:366,ref:'The chest of drawers is about 80 cm high.'},
-    living:{label:'Living room',img:'/img/rooms/mantel.jpg',W:1460,H:1800,ppc:8.0,cx:615,base:1170,ref:'The mantelpiece is about 1.5 m wide.'},
-    studio:{label:'Studio wall',img:'/img/rooms/studio.jpg',W:1460,H:974,ppc:2.58,cx:690,floor:707,ref:'The stool is about 1 m high.'}
+    bedroom:{label:'Bedroom',img:'/img/rooms/chest.jpg',W:1460,H:975,ppc:5.7,cx:456,base:366,ref:'The chest of drawers is about 80 cm high.'},
+    living:{label:'Living room',img:'/img/rooms/mantel.jpg',W:1460,H:1800,ppc:8.0,cx:736,base:1170,front:{img:'/img/rooms/mantel-front.png',x:876,y:604,w:511,h:868},ref:'The mantelpiece is about 1.5 m wide.'},
+    studio:{label:'Studio wall',img:'/img/rooms/studio.jpg',W:1460,H:974,ppc:2.58,cx:545,floor:707,ref:'The stool is about 1 m high.'}
   };
-  function autoRoom(s){var m=Math.max(s.w,s.h);return m<=40?'bedroom':m<=80?'living':'studio';}
+  var BIG=100; /* studio wall only for very large pieces (longest side over 1 m) */
+  function autoRoom(s){var m=Math.max(s.w,s.h);return m<=40?'bedroom':m<=BIG?'living':'studio';}
+  function roomList(s){return Object.keys(ROOMS).filter(function(k){return k!=='studio'||Math.max(s.w,s.h)>BIG;});}
   function roomScene(w,kind,framed){
     var s=sizeCm(w); if(!s) return '';
     var R=ROOMS[kind], fr=framed?5:0, ow=(s.w+fr*2)*R.ppc, oh=(s.h+fr*2)*R.ppc, top;
@@ -117,7 +119,8 @@
     var sh=Math.max(1,R.ppc*0.5);
     return '<div class="rv-ph" data-w="'+R.W+'" data-h="'+R.H+'"><img src="'+R.img+'" alt="">'+
       '<div class="rv-art'+(fr?' fr':'')+'" style="left:'+pc(left,R.W)+';top:'+pc(top,R.H)+';width:'+pc(ow,R.W)+';height:'+pc(oh,R.H)+';padding:'+pc(fr*R.ppc,R.W)+';box-shadow:0 '+(sh*1.2).toFixed(1)+'px '+(sh*3).toFixed(1)+'px rgba(0,0,0,.28),0 '+(sh*.3).toFixed(1)+'px '+(sh*.6).toFixed(1)+'px rgba(0,0,0,.22)">'+
-      '<img src="'+esc(w.image)+'" alt="'+esc(w.title)+' on the wall"></div></div>';
+      '<img src="'+esc(w.image)+'" alt="'+esc(w.title)+' on the wall"></div>'+
+      (R.front?'<img class="rv-front" src="'+R.front.img+'" alt="" style="left:'+pc(R.front.x,R.W)+';top:'+pc(R.front.y,R.H)+';width:'+pc(R.front.w,R.W)+';height:'+pc(R.front.h,R.H)+'">':'')+'</div>';
   }
   function fitRoom(){
     if(!lb) return; var sc=lb.querySelector('.rv-scene'),ph=lb.querySelector('.rv-ph'); if(!sc||!ph) return;
@@ -128,9 +131,9 @@
   function renderRoom(){
     var g=groups[cur[0]], w=g[cur[1]], rv=lb.querySelector('.roomview'), s=sizeCm(w);
     var framed=!!(w.framed_price&&choice==='framed');
-    if(!roomKind||!ROOMS[roomKind]) roomKind=autoRoom(s);
+    var list=roomList(s); if(!roomKind||list.indexOf(roomKind)<0) roomKind=autoRoom(s);
     var R=ROOMS[roomKind];
-    rv.innerHTML='<div class="rv-bar"><div class="rv-tabs" role="group" aria-label="Room">'+Object.keys(ROOMS).map(function(k){return '<button data-r="'+k+'" aria-pressed="'+(roomKind===k)+'">'+ROOMS[k].label+'</button>';}).join('')+'</div><button class="rv-back">Back to painting</button></div>'+
+    rv.innerHTML='<div class="rv-bar"><div class="rv-tabs" role="group" aria-label="Room">'+list.map(function(k){return '<button data-r="'+k+'" aria-pressed="'+(roomKind===k)+'">'+ROOMS[k].label+'</button>';}).join('')+'</div><button class="rv-back">Back to painting</button></div>'+
       '<div class="rv-scene">'+roomScene(w,roomKind,framed)+'</div><p class="rv-note">'+esc(w.title)+(w.size?', '+esc(withInches(w.size)):'')+(framed?', framed':'')+', shown approximately to scale. '+R.ref+'</p>';
     Array.prototype.forEach.call(rv.querySelectorAll('.rv-tabs button'),function(b){b.onclick=function(){roomKind=b.getAttribute('data-r');renderRoom();};});
     rv.querySelector('.rv-back').onclick=function(){setRoom(false);};
