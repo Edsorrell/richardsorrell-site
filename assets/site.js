@@ -103,7 +103,7 @@
      ppc = pixels per cm on the wall plane, cx = centre line, base = y of the
      painting's lowest allowed edge, floor/eye = optional eye-level hanging. */
   var ROOMS={
-    bedroom:{label:'Bedroom',img:'/img/rooms/chest.jpg',W:1460,H:975,ppc:5.7,cx:456,base:366,ref:'The chest of drawers is about 80 cm high.'},
+    bedroom:{label:'Bedroom',img:'/img/rooms/bedroom.jpg',W:1460,H:1394,ppc:10,cx:599,base:750,ref:'The side table is about 45 cm wide.'},
     living:{label:'Living room',img:'/img/rooms/mantel.jpg',W:1460,H:1800,ppc:8.0,cx:736,base:1170,front:{img:'/img/rooms/mantel-front.png',x:876,y:604,w:511,h:868},ref:'The mantelpiece is about 1.5 m wide.'},
     studio:{label:'Studio wall',img:'/img/rooms/studio.jpg',W:1460,H:974,ppc:2.58,cx:545,floor:707,ref:'The stool is about 1 m high.'}
   };
