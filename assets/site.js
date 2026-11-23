@@ -19,7 +19,13 @@
       used[id]=1; w._id=id; ids[id]=[group,i];
     });
   }
-  function caption(w){return [w.medium,w.size].filter(Boolean).join(', ')+(w.year?(w.medium||w.size?' · ':'')+w.year:'');}
+  function withInches(sz){
+    sz=String(sz||'');if(!sz||/\bin\b|"|inch/i.test(sz))return sz;
+    var m=sz.match(/(\d+(?:\.\d+)?)\s*[×xX]\s*(\d+(?:\.\d+)?)\s*cm/);if(!m)return sz;
+    var f=function(c){var v=c/2.54;return (Math.round(v*2)/2).toString().replace(/\.0$/,'');};
+    return sz+' ('+f(parseFloat(m[1]))+' × '+f(parseFloat(m[2]))+' in)';
+  }
+  function caption(w){return [w.medium,withInches(w.size)].filter(Boolean).join(', ')+(w.year?(w.medium||w.size?' · ':'')+w.year:'');}
   function card(w,group,i,sell){
     if(!w||!w.image) return '';
     var right='';
@@ -134,7 +140,7 @@
     var framed=!!(w.framed_price&&choice==='framed');
     var ref=roomKind==='living'?'The sofa is about 2.2 m wide.':'The table is 1.2 m wide.';
     rv.innerHTML='<div class="rv-bar"><div class="rv-tabs" role="group" aria-label="Room"><button data-r="living" aria-pressed="'+(roomKind==='living')+'">Living room</button><button data-r="hall" aria-pressed="'+(roomKind==='hall')+'">Hallway</button></div><button class="rv-back">Back to painting</button></div>'+
-      '<div class="rv-scene">'+roomSVG(w,roomKind,framed)+'</div><p class="rv-note">'+esc(w.title)+(w.size?', '+esc(w.size):'')+(framed?', framed':'')+', shown to scale. '+ref+'</p>';
+      '<div class="rv-scene">'+roomSVG(w,roomKind,framed)+'</div><p class="rv-note">'+esc(w.title)+(w.size?', '+esc(withInches(w.size)):'')+(framed?', framed':'')+', shown to scale. '+ref+'</p>';
     Array.prototype.forEach.call(rv.querySelectorAll('.rv-tabs button'),function(b){b.onclick=function(){roomKind=b.getAttribute('data-r');renderRoom();};});
     rv.querySelector('.rv-back').onclick=function(){setRoom(false);};
   }
