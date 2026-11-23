@@ -155,11 +155,12 @@
       else if(w.price&&w.framed_price){
         h+='<div class="opts" role="group" aria-label="Framing"><button data-c="unframed" aria-pressed="'+(choice==='unframed')+'"><small>Unframed</small><span>'+money(w.price)+'</span></button><button data-c="framed" aria-pressed="'+(choice==='framed')+'"><small>Framed</small><span>'+money(w.framed_price)+'</span></button></div>';
       } else if(w.price){ h+='<p class="price">'+money(w.price)+'</p>'; }
+      h+='<div class="acts">';
       if(sizeCm(w)) h+='<button class="btn ghost" data-room>'+(roomOpen?'Back to painting':'View in a room')+'</button>';
-      h+='<a class="btn" href="'+esc(enquireHref(w))+'">'+(w.sold?'Get in touch':'Enquire about this painting')+'</a>';
-      var tel=String(SITE.phone||'');
-      h+='<p class="small">'+(tel?'Or call '+esc(tel)+'. ':'')+esc(SITE.delivery_note||'')+'</p>';
-      if(w.framed_price&&!w.sold&&SITE.framing_note) h+='<p class="small">'+esc(SITE.framing_note)+'</p>';
+      h+='<a class="btn" href="'+esc(enquireHref(w))+'">'+(w.sold?'Get in touch':'Enquire<span class="lg"> about this painting</span>')+'</a></div>';
+      var tel=String(SITE.phone||''), telHref=tel.replace(/\(0\)/g,'').replace(/[^0-9+]/g,'').replace(/^0/,'+44');
+      h+='<p class="small">'+(tel?'<span class="tel">Or call <a href="tel:'+esc(telHref)+'">'+esc(tel)+'</a>. </span>':'')+'<span class="dl">'+esc(SITE.delivery_note||'')+'</span></p>';
+      if(w.framed_price&&!w.sold&&SITE.framing_note) h+='<p class="small dl">'+esc(SITE.framing_note)+'</p>';
     }
     var side=lb.querySelector('.side'); side.innerHTML=h;
     Array.prototype.forEach.call(side.querySelectorAll('.opts button'),function(b){b.onclick=function(){choice=b.getAttribute('data-c');renderSide();if(roomOpen)renderRoom();};});
@@ -179,8 +180,9 @@
     var r=ids[id]; if(!r) return;
     if(!lb) buildLB();
     cur=r.slice(); choice='unframed'; roomKind=null;
+    if(roomOpen){roomOpen=false;lb.classList.remove('room');}
     lb.classList.add('open'); document.body.classList.add('lbx-open');
-    show(); lb.querySelector('.x').focus({preventScroll:true});
+    show(); if(window.matchMedia&&matchMedia('(hover:hover)').matches) lb.querySelector('.x').focus({preventScroll:true});
   }
   function step(d){roomKind=null;if(roomOpen){roomOpen=false;lb.classList.remove('room');}var g=groups[cur[0]],n=cur[1]+d,wrap=n<0||n>=g.length;cur[1]=(n+g.length)%g.length;choice='unframed';show(!wrap);}
   function close(){

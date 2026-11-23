@@ -269,3 +269,35 @@ body.lbx-open{overflow:hidden}
   .rv-bar{padding-right:56px;flex-wrap:wrap}
   .rv-back{display:none}
 }
+
+/* Viewer actions */
+.lbx .acts{display:flex;flex-direction:column;gap:12px}
+.lbx .x{z-index:5}
+
+/* Phone and tablet viewer: everything fits on one screen, actions at the bottom */
+@media (max-width:900px){
+  .lbx.open{display:flex;flex-direction:column;overflow:hidden}
+  .lbx .stage{flex:1 1 auto;height:auto;min-height:0}
+  .lbx .slide{padding:46px 6px 10px}
+  .lbx .slide img{max-height:100%}
+  .lbx .count{top:16px;left:16px}
+  .lbx .x{top:10px;right:10px;padding:6px 8px}
+  .lbx .side{flex:0 0 auto;display:grid;grid-template-columns:1fr auto;column-gap:16px;row-gap:4px;align-items:end;padding:14px 16px calc(14px + env(safe-area-inset-bottom));border-top:1px solid var(--rule);overflow:visible}
+  .lbx .side>*{grid-column:1/-1;margin:0}
+  .lbx .side>div:first-child{grid-column:1}
+  .lbx h2{font-size:24px;line-height:1.1}
+  .lbx .side .meta{grid-column:1;font-size:13px;margin:0}
+  .lbx .side .price{grid-column:2;grid-row:1/span 2;align-self:end;justify-self:end;font-size:22px;margin:0}
+  .lbx .side .note,.lbx .side .dl{display:none}
+  .lbx .side .opts{margin-top:8px}
+  .lbx .side .opts button{padding:8px 12px}
+  .lbx .side .opts button span{font-size:16px}
+  .lbx .acts{flex-direction:row;gap:8px;margin-top:10px}
+  .lbx .acts .btn{flex:1 1 0;padding:14px 10px;font-size:14px;white-space:nowrap}
+  .lbx .acts .lg{display:none}
+  .lbx .side .small{font-size:12px;text-align:center;margin-top:6px}
+  .lbx .roomview{padding:12px 12px 8px}
+  .rv-bar{padding-right:64px;min-height:30px}
+  .rv-scene{padding:8px 0}
+  .rv-note{font-size:12px;line-height:1.4}
+}
