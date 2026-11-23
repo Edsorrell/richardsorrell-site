@@ -28,7 +28,7 @@
     return '<div class="work" data-sold="'+(w.sold?1:0)+'"><a href="#'+w._id+'" data-open="'+w._id+'"><img src="'+esc(thumb(w.image))+'" data-full="'+esc(w.image)+'" onerror="if(this.src.indexOf(this.dataset.full)<0){this.src=this.dataset.full}" alt="'+esc(w.title)+'" loading="lazy"></a><div class="cap"><b>'+esc(w.title)+'</b>'+right+'</div></div>';
   }
 
-  var lb, cur=null, choice='unframed', sellGroups={paintings:1};
+  var lb, cur=null, choice='unframed', sellGroups={paintings:1,drawings:1};
   function buildLB(){
     lb=document.createElement('div');lb.className='lbx';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');
     lb.innerHTML='<div class="stage"><span class="count"></span><button class="arrow prev" aria-label="Previous painting">&#8592;</button><img alt=""><button class="arrow next" aria-label="Next painting">&#8594;</button></div><div class="side"></div><button class="x" aria-label="Close">Close</button>';
@@ -174,6 +174,9 @@
         Array.prototype.forEach.call(f.children,function(x){x.setAttribute('aria-pressed',x===b);});
         Array.prototype.forEach.call(grid.children,function(c){var s=c.getAttribute('data-sold')==='1';c.style.display=(v==='all'||(v==='sold'&&s)||(v==='avail'&&!s))?'':'none';});};
     }
+    var dr=(d.drawings||[]).filter(function(w){return w&&w.image;});
+    if(dr.length){register('drawings',dr);$('drawings').style.display='';$('drawings-intro').textContent=d.drawings_intro||'';
+      $('drawings-grid').innerHTML=dr.map(function(w,i){return card(w,'drawings',i,true);}).join('');}
     var tel=String(d.phone||'').replace(/[^0-9+]/g,'').replace(/^0/,'+44');
     $('contact-line').innerHTML='To buy a painting or arrange a studio visit, call <a href="tel:'+esc(tel)+'">'+esc(d.phone)+'</a> or email <a href="mailto:'+esc(d.email)+'">'+esc(d.email)+'</a>';
     $('address').innerHTML=esc(d.address).replace(/\n/g,'<br>');
@@ -223,6 +226,7 @@
   Promise.all(need).then(function(r){
     SITE=r[0]; var ar=r[1]||{}; var ex=r[2]||{};
     archiveNav(ar); footer();
+    var nd=$('nav-drawings'); if(nd&&(SITE.drawings||[]).some(function(w){return w&&w.image;})) nd.style.display='';
     if(page==='home') initHome(SITE);
     if(page==='about') initAbout(SITE,ex);
     if(page==='exhibitions') initExhibitions(ex);

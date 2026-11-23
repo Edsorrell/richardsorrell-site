@@ -512,5 +512,30 @@
         "image": "/img/studio.jpg",
         "caption": "Richard in his studio, West Cornwall"
     },
-    "welcome_text": "Richard Sorrell was born in 1948 into a family of artists: his father was the draughtsman and painter Alan Sorrell, his mother the watercolourist Elizabeth Sorrell.\n\nAfter training at Kingston and the Royal Academy Schools, he spent some twenty-five years painting landscape, still life and aerial views of great houses for the National Trust. Today he paints invented pictures of people and places, from sketches, memory and imagination, in his studio near Penzance.\n\nHe is a past President of the Royal Watercolour Society, a member of the Royal Society of British Artists and the New English Art Club, and shows every year at the Royal Academy Summer Exhibition."
+    "welcome_text": "Richard Sorrell was born in 1948 into a family of artists: his father was the draughtsman and painter Alan Sorrell, his mother the watercolourist Elizabeth Sorrell.\n\nAfter training at Kingston and the Royal Academy Schools, he spent some twenty-five years painting landscape, still life and aerial views of great houses for the National Trust. Today he paints invented pictures of people and places, from sketches, memory and imagination, in his studio near Penzance.\n\nHe is a past President of the Royal Watercolour Society, a member of the Royal Society of British Artists and the New English Art Club, and shows every year at the Royal Academy Summer Exhibition.",
+    "drawings_intro": "Ink and brush drawings, shown at the Works on Paper Fair.",
+    "drawings": [
+        {
+            "title": "Two People by a Hedge",
+            "year": "",
+            "medium": "Ink",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
+            "image": "/img/two-people-hedge.jpg"
+        },
+        {
+            "title": "Laughing Woman",
+            "year": "",
+            "medium": "Ink",
+            "size": "",
+            "price": null,
+            "framed_price": null,
+            "sold": false,
+            "note": "",
+            "image": "/img/laughing-woman.jpg"
+        }
+    ]
 }
