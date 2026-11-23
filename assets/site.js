@@ -214,7 +214,6 @@
     if(!(d.hero&&d.hero.image)){bleed.style.display='none';return;}
     register('hero',[d.hero]);
     var hi=$('hero-img');hi.src=d.hero.image;hi.alt=d.hero.title||'';
-    var hc=$('hero-credit');hc.textContent=d.hero.title||'';hc.href='#'+d.hero._id;hc.setAttribute('data-open',d.hero._id);
     var h=$('headline'),words=(d.headline||'').trim().split(/\s+/);
     h.innerHTML=words.map(function(w,i){return '<span class="wd"><span style="--d:'+i+'">'+esc(w)+'</span></span>';}).join(' ');
     $('intro').textContent=d.intro||'';
