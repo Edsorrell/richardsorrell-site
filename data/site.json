@@ -11,7 +11,7 @@
     "image": "/img/studio.jpg",
     "caption": "Richard in his studio, West Cornwall"
   },
-  "welcome_text": "Richard Sorrell was born in 1948 into a family of artists: his father was the draughtsman and painter Alan Sorrell, his mother the watercolourist Elizabeth Sorrell.\n\nAfter training at Kingston and the Royal Academy Schools, he spent some twenty-five years painting landscape, still life and aerial views of great houses for the National Trust. Today he paints invented pictures of people and places, from sketches, memory and imagination, in his studio near Penzance.\n\nHe is a past President of the Royal Watercolour Society, a member of the Royal Society of British Artists and the New English Art Club, and shows every year at the Royal Academy Summer Exhibition.",
+  "welcome_text": "Richard Sorrell was born in 1948 into a family of artists: his father was the draughtsman and painter Alan Sorrell, his mother the watercolourist Elizabeth Sorrell.\n\nAfter training at Kingston and the Royal Academy Schools, he spent some twenty-five years painting landscape, still life and aerial views of great houses for the National Trust. Today he paints invented pictures of people and places, from sketches, memory and imagination, in his studio near Penzance.\n\nHe is a past President of the Royal Watercolour Society, a member of the Royal Society of British Artists and the New English Art Club, and shows at the Royal Academy Summer Exhibition.",
   "paintings_heading": "Landscape and figures",
   "paintings_intro": "Recent work. All paintings are for sale; please get in touch to arrange viewing, payment and delivery.",
   "paintings": [
@@ -32,9 +32,13 @@
       "sold": false
     },
     {
-      "title": "The Lit Window",
+      "title": "Telescope",
       "image": "/img/the-lit-window.jpg",
-      "sold": false
+      "medium": "acrylic",
+      "size": "19x28cm",
+      "framed_price": 797,
+      "sold": false,
+      "note": "An observer looks through a telescope at the night sky. Close by a shadowy figure moves outside."
     },
     {
       "title": "Telescope",
@@ -47,22 +51,27 @@
     {
       "title": "Biting a Burger",
       "image": "/img/a-hurried-meal.jpg",
+      "year": "2026",
       "medium": "Acrylic",
       "size": "17 × 23 cm",
       "price": 700,
-      "sold": false
+      "sold": false,
+      "note": "based on a sketch made at Long Rock near Marazion in Cornwall"
     },
     {
-      "title": "Corridor",
+      "title": "Into the Reception Room",
       "image": "/img/corridor.jpg",
-      "medium": "Oil",
-      "size": "61 × 46 cm",
-      "price": 2000,
-      "sold": false
+      "year": "2025",
+      "medium": "acrylic",
+      "size": "26x19cm",
+      "price": 700,
+      "sold": false,
+      "note": "A couple in their smartest clothes nervously approach a reception."
     },
     {
       "title": "A Man in a Baggy Jumper",
       "image": "/img/man-on-a-stool.jpg",
+      "year": "2025",
       "medium": "Acrylic",
       "size": "26 × 20 cm",
       "price": 750,
@@ -71,10 +80,12 @@
     {
       "title": "Neck Rub",
       "image": "/img/hands-on-his-shoulders.jpg",
+      "year": "2024",
       "medium": "Acrylic",
       "size": "29 × 20 cm",
       "price": 800,
-      "sold": false
+      "sold": false,
+      "note": "A man sits contentedly as his wife lovingly massages his neck,"
     },
     {
       "title": "Happy People",
@@ -87,22 +98,27 @@
     {
       "title": "Haircut",
       "image": "/img/the-haircut.jpg",
+      "year": "2026",
       "medium": "Acrylic",
       "size": "27 × 18 cm",
       "price": 800,
-      "sold": false
+      "sold": false,
+      "note": "from a sketch made when waiting for a trim"
     },
     {
       "title": "Travellers",
       "image": "/img/under-the-arches.jpg",
+      "year": "2026",
       "medium": "Acrylic",
       "size": "18 × 19 cm",
       "price": 700,
-      "sold": false
+      "sold": false,
+      "note": "based on a sketch made at Paddington Station, observing the distinctively different way that people walk"
     },
     {
       "title": "A Woman with a White Bird",
       "image": "/img/the-white-bird.jpg",
+      "year": "2026",
       "medium": "Acrylic",
       "size": "19 × 20 cm",
       "price": 700,
@@ -111,29 +127,36 @@
     {
       "title": "A Story",
       "image": "/img/the-whisper.jpg",
+      "year": "2026",
       "medium": "Acrylic",
       "size": "24 × 17 cm",
       "price": 800,
-      "sold": false
+      "sold": false,
+      "note": "A woman is amused by a bedraggled man who has taken off his glasses in an effort to impress her."
     },
     {
       "title": "A Line into the Sea",
       "image": "/img/the-balcony.jpg",
+      "year": "2025",
       "medium": "Acrylic",
       "size": "26 × 20 cm",
       "price": 900,
-      "sold": false
+      "sold": false,
+      "note": "based on a sketch\nThe elements of this pianting have been carefully arranged and simplified to make a powerful composition with a gentle movement."
     },
     {
       "title": "Gym",
       "image": "/img/gym.jpg",
+      "year": "2026",
       "medium": "Oil",
       "size": "61 × 46 cm",
-      "sold": false
+      "sold": false,
+      "note": "based on a sketch made at agym near Rugby\nTwo people are involved in strenuous exercise.\nThe composition is a study of continuous upward and downward movement."
     },
     {
       "title": "Gardeners",
       "image": "/img/gardeners.jpg",
+      "year": "2026",
       "medium": "Oil",
       "size": "61 × 44 cm",
       "price": 2000,
@@ -142,71 +165,90 @@
     {
       "title": "A Walk in Nature",
       "image": "/img/a-walk-in-nature.jpg",
+      "year": "2024",
       "medium": "Oil",
       "size": "61 × 49 cm",
       "price": 2000,
-      "sold": false
+      "sold": false,
+      "note": "The thorny brables stretching across the field symbolise Nature as both cruel and kind."
     },
     {
       "title": "On the Bus",
       "image": "/img/on-the-bus.jpg",
+      "year": "2026",
       "medium": "Oil",
       "size": "38 × 40 cm",
       "price": 1800,
       "sold": false
     },
     {
-      "title": "Head in the Hedgerow",
+      "title": "A wil place",
       "image": "/img/head-in-the-hedgerow.jpg",
-      "sold": false
+      "year": "2024",
+      "medium": "oil",
+      "price": 2000,
+      "sold": false,
+      "note": "A man struggles through chaotic undergrowth; beyond there is a distant view of the open sea."
     },
     {
       "title": "In the Office",
       "image": "/img/in-the-office.jpg",
+      "year": "2026",
       "medium": "Oil",
       "size": "46 × 61 cm",
       "price": 2000,
-      "sold": false
+      "sold": false,
+      "note": "This painting was based on a sketch of a woman sorting out papers in an opticians."
     },
     {
       "title": "Two Skinny Lattes",
       "image": "/img/two-skinny-lattes.jpg",
+      "year": "2026",
       "medium": "Oil",
       "size": "61 × 46 cm",
       "price": 2000,
-      "sold": false
+      "sold": false,
+      "note": "Two women chat together at the counter of a cafe."
     },
     {
-      "title": "Into the Reception Room",
+      "title": "Corridor",
       "image": "/img/two-people-waiting.jpg",
-      "medium": "Acrylic",
-      "size": "26 × 19 cm",
-      "price": 700,
-      "sold": false
+      "year": "2026",
+      "medium": "oil",
+      "size": "61x46 cm",
+      "price": 2000,
+      "sold": false,
+      "note": "Two people sit waiting in a corridor. Through the window is a more inviting prospect.  "
     },
     {
       "title": "A Swirl",
       "image": "/img/a-swirl.jpg",
+      "year": "2026",
       "medium": "Oil",
       "size": "46 × 61 cm",
       "price": 2000,
-      "sold": false
+      "sold": false,
+      "note": "Two people dance whilst another looks on in a bright interior."
     },
     {
       "title": "The Land of the Lizard",
       "image": "/img/the-land-of-the-lizard.jpg",
+      "year": "2026",
       "medium": "Oil",
       "size": "51 × 61 cm",
       "price": 2500,
-      "sold": false
+      "sold": false,
+      "note": "This painting was based on a sketch made in Turkey in 1986. It is a distant memory, but has come back to life with a feeling of immediacy. "
     },
     {
       "title": "The Garden in Chelsea",
       "image": "/img/the-garden-in-chelsea.jpg",
+      "year": "2026",
       "medium": "Oil",
       "size": "61 × 46 cm",
       "price": 2400,
-      "sold": false
+      "sold": false,
+      "note": "This painting is based on a sketch from an upstairs window of the Chelsea Arts  Club, of which Richard is a member."
     },
     {
       "title": "Chopsticks",
@@ -214,11 +256,14 @@
       "medium": "Oil",
       "size": "61 × 46 cm",
       "price": 2400,
-      "sold": false
+      "sold": false,
+      "note": "This picture of eating noodles with chopsticks is a rigourously pared down composition involving space and movement,"
     },
     {
       "title": "Conversation",
       "image": "/img/conversation.jpg",
+      "year": "2026",
+      "medium": "oil",
       "sold": false
     },
     {
@@ -242,32 +287,42 @@
       "sold": false
     },
     {
-      "title": "The Embrace",
+      "title": "Winter",
       "image": "/img/the-embrace.jpg",
       "sold": false
     },
     {
-      "title": "The Dog",
+      "title": "Girl in Quimper",
       "image": "/img/the-dog.jpg",
-      "sold": false
+      "year": "2025",
+      "medium": "oil",
+      "sold": false,
+      "note": "This painting is from a sketch of anelegant young woman in Brittany who was waiting for a bus. The girl and her dog form a self-contined pyramidal shape within the picture."
     },
     {
       "title": "The Promenade",
       "image": "/img/the-promenade.jpg",
-      "sold": false
+      "year": "2020",
+      "medium": "oil",
+      "sold": false,
+      "note": "a memory of the seafront at Wherrytown in Penzance"
     },
     {
       "title": "The Red House",
       "image": "/img/the-red-house.jpg",
-      "sold": false
+      "year": "2025",
+      "medium": "oil",
+      "sold": false,
+      "note": "This painting is a  based on a memory of the Matisse museum in Nice. It was worked on for a long time and has resolved into a complex composition of static and moving elements that drift from right to left and also into receding space,"
     },
     {
-      "title": "A Wild Place",
+      "title": "Ravine",
       "image": "/img/a-wild-place.jpg",
+      "year": "2022",
       "medium": "Oil",
-      "size": "61 × 46 cm",
       "price": 2000,
-      "sold": false
+      "sold": false,
+      "note": "Two people manage to climb out of a deep and rocky ravine. Above is a featureless blue sky."
     },
     {
       "title": "Asleep",
