@@ -1,541 +1,363 @@
 {
-    "headline": "Imagined, from a lifetime of looking.",
-    "intro": "Paintings and drawings built from sketches, memory and the process of painting itself. Made in a studio in West Cornwall.",
-    "hero": {
-        "title": "Starlings",
-        "year": "",
-        "medium": "Acrylic",
-        "size": "20 × 22 cm",
-        "image": "/img/starlings-2026.jpg"
+  "headline": "People doing things",
+  "intro": "When asked what sort of paintings he did, Richard replied 'Subjective narrative paintings' when they looked perplexed he said 'People doing things'  These paintings and drawings are built from sketches, memory and the process of painting itself. Made in a studio in West Cornwall.",
+  "hero": {
+    "title": "Starlings",
+    "medium": "Acrylic",
+    "size": "20 × 22 cm",
+    "image": "/img/starlings-2026.jpg"
+  },
+  "welcome_photo": {
+    "image": "/img/studio.jpg",
+    "caption": "Richard in his studio, West Cornwall"
+  },
+  "welcome_text": "Richard Sorrell was born in 1948 into a family of artists: his father was the draughtsman and painter Alan Sorrell, his mother the watercolourist Elizabeth Sorrell.\n\nAfter training at Kingston and the Royal Academy Schools, he spent some twenty-five years painting landscape, still life and aerial views of great houses for the National Trust. Today he paints invented pictures of people and places, from sketches, memory and imagination, in his studio near Penzance.\n\nHe is a past President of the Royal Watercolour Society, a member of the Royal Society of British Artists and the New English Art Club, and shows every year at the Royal Academy Summer Exhibition.",
+  "paintings_heading": "Landscape and figures",
+  "paintings_intro": "Recent work. All paintings are for sale; please get in touch to arrange viewing, payment and delivery.",
+  "paintings": [
+    {
+      "title": "Dancing on the Green",
+      "image": "/img/dancing-in-the-garden.jpg",
+      "medium": "Acrylic",
+      "size": "26 × 20 cm",
+      "price": 800,
+      "sold": false
     },
-    "paintings_heading": "Landscape and figures",
-    "paintings_intro": "Recent work. All paintings are for sale; please get in touch to arrange viewing, payment and delivery.",
-    "paintings": [
-        {
-            "title": "Dancing on the Green",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "26 × 20 cm",
-            "price": 800,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/dancing-in-the-garden.jpg"
-        },
-        {
-            "title": "In the Sea at Sunset",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "20 × 28 cm",
-            "price": 800,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/evening-swim.jpg"
-        },
-        {
-            "title": "The Lit Window",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/the-lit-window.jpg"
-        },
-        {
-            "title": "Telescope",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "19 × 28 cm",
-            "price": 800,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/on-the-terrace.jpg"
-        },
-        {
-            "title": "Biting a Burger",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "17 × 23 cm",
-            "price": 700,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/a-hurried-meal.jpg"
-        },
-        {
-            "title": "Corridor",
-            "year": "",
-            "medium": "Oil",
-            "size": "61 × 46 cm",
-            "price": 2000,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/corridor.jpg"
-        },
-        {
-            "title": "A Man in a Baggy Jumper",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "26 × 20 cm",
-            "price": 750,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/man-on-a-stool.jpg"
-        },
-        {
-            "title": "Neck Rub",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "29 × 20 cm",
-            "price": 800,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/hands-on-his-shoulders.jpg"
-        },
-        {
-            "title": "Happy People",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "23 × 16 cm",
-            "price": 700,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/two-faces.jpg"
-        },
-        {
-            "title": "Haircut",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "27 × 18 cm",
-            "price": 800,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/the-haircut.jpg"
-        },
-        {
-            "title": "Travellers",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "18 × 19 cm",
-            "price": 700,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/under-the-arches.jpg"
-        },
-        {
-            "title": "A Woman with a White Bird",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "19 × 20 cm",
-            "price": 700,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/the-white-bird.jpg"
-        },
-        {
-            "title": "A Story",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "24 × 17 cm",
-            "price": 800,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/the-whisper.jpg"
-        },
-        {
-            "title": "A Line into the Sea",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "26 × 20 cm",
-            "price": 900,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/the-balcony.jpg"
-        },
-        {
-            "title": "Gym",
-            "year": "",
-            "medium": "Oil",
-            "size": "61 × 46 cm",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/gym.jpg"
-        },
-        {
-            "title": "Gardeners",
-            "year": "",
-            "medium": "Oil",
-            "size": "61 × 44 cm",
-            "price": 2000,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/gardeners.jpg"
-        },
-        {
-            "title": "A Walk in Nature",
-            "year": "",
-            "medium": "Oil",
-            "size": "61 × 49 cm",
-            "price": 2000,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/a-walk-in-nature.jpg"
-        },
-        {
-            "title": "On the Bus",
-            "year": "",
-            "medium": "Oil",
-            "size": "38 × 40 cm",
-            "price": 1800,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/on-the-bus.jpg"
-        },
-        {
-            "title": "Head in the Hedgerow",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/head-in-the-hedgerow.jpg"
-        },
-        {
-            "title": "In the Office",
-            "year": "",
-            "medium": "Oil",
-            "size": "46 × 61 cm",
-            "price": 2000,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/in-the-office.jpg"
-        },
-        {
-            "title": "Two Skinny Lattes",
-            "year": "",
-            "medium": "Oil",
-            "size": "61 × 46 cm",
-            "price": 2000,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/two-skinny-lattes.jpg"
-        },
-        {
-            "title": "Into the Reception Room",
-            "year": "",
-            "medium": "Acrylic",
-            "size": "26 × 19 cm",
-            "price": 700,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/two-people-waiting.jpg"
-        },
-        {
-            "title": "A Swirl",
-            "year": "",
-            "medium": "Oil",
-            "size": "46 × 61 cm",
-            "price": 2000,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/a-swirl.jpg"
-        },
-        {
-            "title": "The Land of the Lizard",
-            "year": "",
-            "medium": "Oil",
-            "size": "51 × 61 cm",
-            "price": 2500,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/the-land-of-the-lizard.jpg"
-        },
-        {
-            "title": "The Garden in Chelsea",
-            "year": "",
-            "medium": "Oil",
-            "size": "61 × 46 cm",
-            "price": 2400,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/the-garden-in-chelsea.jpg"
-        },
-        {
-            "title": "Chopsticks",
-            "year": "",
-            "medium": "Oil",
-            "size": "61 × 46 cm",
-            "price": 2400,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/chopsticks.jpg"
-        },
-        {
-            "title": "Conversation",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/conversation.jpg"
-        },
-        {
-            "title": "On the Bench",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/on-the-bench.jpg"
-        },
-        {
-            "title": "Ice Cream",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/ice-cream.jpg"
-        },
-        {
-            "title": "Reading Under the Tree",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/reading-under-the-tree.jpg"
-        },
-        {
-            "title": "On the Sofa",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/on-the-sofa.jpg"
-        },
-        {
-            "title": "The Embrace",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/the-embrace.jpg"
-        },
-        {
-            "title": "The Dog",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/the-dog.jpg"
-        },
-        {
-            "title": "The Promenade",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/the-promenade.jpg"
-        },
-        {
-            "title": "The Red House",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/the-red-house.jpg"
-        },
-        {
-            "title": "A Wild Place",
-            "year": "",
-            "medium": "Oil",
-            "size": "61 × 46 cm",
-            "price": 2000,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/a-wild-place.jpg"
-        },
-        {
-            "title": "Asleep",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/asleep.jpg"
-        },
-        {
-            "title": "Clearing the Ruin",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/clearing-the-ruin.jpg"
-        },
-        {
-            "title": "Woman in Red",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/woman-in-red.jpg"
-        },
-        {
-            "title": "Eating a Peach",
-            "year": "",
-            "medium": "",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/eating-a-peach.jpg"
-        }
-    ],
-    "about_lede": "The pictures are inventions, or reinventions of reality. Sometimes they may appear a little awkward and strange, but it is their awkwardness that gives them the power to communicate.",
-    "about_text": "Richard Sorrell was born in 1948, the son of the historical draughtsman and painter Alan Sorrell and the watercolourist Elizabeth Sorrell. He studied at Walthamstow Art School, Kingston College of Art and the Royal Academy Schools.\n\nFor around 25 years, living in London and Norfolk, he painted landscape, still life and portraits, and became known for aerial views of great houses for the National Trust and private owners. Over the past two decades the invented paintings have come to the fore, alongside an interest in sculpture, gardens and planting.\n\nHe was elected to the Royal Watercolour Society in 1975 and served as its President from 2006 to 2009.",
-    "societies": [
-        {
-            "name": "Royal Watercolour Society",
-            "note": "President 2006 to 2009"
-        },
-        {
-            "name": "Royal Society of British Artists",
-            "note": "de Laszlo Medal 2002"
-        },
-        {
-            "name": "New English Art Club"
-        },
-        {
-            "name": "Art Workers Guild"
-        },
-        {
-            "name": "Small Paintings Group"
-        }
-    ],
-    "collections": [
-        {
-            "name": "Victoria and Albert Museum"
-        },
-        {
-            "name": "The National Trust"
-        },
-        {
-            "name": "Museum of London"
-        },
-        {
-            "name": "The Courtauld Institute"
-        },
-        {
-            "name": "The Faringdon Collection"
-        }
-    ],
-    "films": [
-        {
-            "title": "Landscape and Figures",
-            "text": "From The Sunshine Painters and The Open Sky, two films by Stephen Gammond featuring Richard Sorrell.",
-            "url": "https://www.youtube.com/watch?v=PMdFaf_LvwY"
-        },
-        {
-            "title": "A Virtual Exhibition",
-            "text": "Richard introduces the idea behind showing his work online as an exhibition you can walk through.",
-            "url": "https://www.youtube.com/watch?v=s5n29ksD5f4"
-        }
-    ],
-    "phone": "+44 7979 514 618",
-    "email": "sorrellr@aol.com",
-    "address": "Higher Hellangove Farm\nBadgers Cross, Gulval\nPenzance, Cornwall TR20 8XD",
-    "news": [],
-    "delivery_note": "Delivery can be arranged in the UK and abroad. The cost depends on the size of the painting and where it is going, and is confirmed when you enquire.",
-    "framing_note": "Where a framed price is shown, the painting can be bought framed or unframed.",
-    "welcome_photo": {
-        "image": "/img/studio.jpg",
-        "caption": "Richard in his studio, West Cornwall"
+    {
+      "title": "In the Sea at Sunset",
+      "image": "/img/evening-swim.jpg",
+      "medium": "Acrylic",
+      "size": "20 × 28 cm",
+      "price": 800,
+      "sold": false
     },
-    "welcome_text": "Richard Sorrell was born in 1948 into a family of artists: his father was the draughtsman and painter Alan Sorrell, his mother the watercolourist Elizabeth Sorrell.\n\nAfter training at Kingston and the Royal Academy Schools, he spent some twenty-five years painting landscape, still life and aerial views of great houses for the National Trust. Today he paints invented pictures of people and places, from sketches, memory and imagination, in his studio near Penzance.\n\nHe is a past President of the Royal Watercolour Society, a member of the Royal Society of British Artists and the New English Art Club, and shows every year at the Royal Academy Summer Exhibition.",
-    "drawings_intro": "Ink and brush drawings, shown at the Works on Paper Fair.",
-    "drawings": [
-        {
-            "title": "Two People by a Hedge",
-            "year": "",
-            "medium": "Ink",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/two-people-hedge.jpg"
-        },
-        {
-            "title": "Laughing Woman",
-            "year": "",
-            "medium": "Ink",
-            "size": "",
-            "price": null,
-            "framed_price": null,
-            "sold": false,
-            "note": "",
-            "image": "/img/laughing-woman.jpg"
-        }
-    ]
+    {
+      "title": "The Lit Window",
+      "image": "/img/the-lit-window.jpg",
+      "sold": false
+    },
+    {
+      "title": "Telescope",
+      "image": "/img/on-the-terrace.jpg",
+      "medium": "Acrylic",
+      "size": "19 × 28 cm",
+      "price": 800,
+      "sold": false
+    },
+    {
+      "title": "Biting a Burger",
+      "image": "/img/a-hurried-meal.jpg",
+      "medium": "Acrylic",
+      "size": "17 × 23 cm",
+      "price": 700,
+      "sold": false
+    },
+    {
+      "title": "Corridor",
+      "image": "/img/corridor.jpg",
+      "medium": "Oil",
+      "size": "61 × 46 cm",
+      "price": 2000,
+      "sold": false
+    },
+    {
+      "title": "A Man in a Baggy Jumper",
+      "image": "/img/man-on-a-stool.jpg",
+      "medium": "Acrylic",
+      "size": "26 × 20 cm",
+      "price": 750,
+      "sold": false
+    },
+    {
+      "title": "Neck Rub",
+      "image": "/img/hands-on-his-shoulders.jpg",
+      "medium": "Acrylic",
+      "size": "29 × 20 cm",
+      "price": 800,
+      "sold": false
+    },
+    {
+      "title": "Happy People",
+      "image": "/img/two-faces.jpg",
+      "medium": "Acrylic",
+      "size": "23 × 16 cm",
+      "price": 700,
+      "sold": false
+    },
+    {
+      "title": "Haircut",
+      "image": "/img/the-haircut.jpg",
+      "medium": "Acrylic",
+      "size": "27 × 18 cm",
+      "price": 800,
+      "sold": false
+    },
+    {
+      "title": "Travellers",
+      "image": "/img/under-the-arches.jpg",
+      "medium": "Acrylic",
+      "size": "18 × 19 cm",
+      "price": 700,
+      "sold": false
+    },
+    {
+      "title": "A Woman with a White Bird",
+      "image": "/img/the-white-bird.jpg",
+      "medium": "Acrylic",
+      "size": "19 × 20 cm",
+      "price": 700,
+      "sold": false
+    },
+    {
+      "title": "A Story",
+      "image": "/img/the-whisper.jpg",
+      "medium": "Acrylic",
+      "size": "24 × 17 cm",
+      "price": 800,
+      "sold": false
+    },
+    {
+      "title": "A Line into the Sea",
+      "image": "/img/the-balcony.jpg",
+      "medium": "Acrylic",
+      "size": "26 × 20 cm",
+      "price": 900,
+      "sold": false
+    },
+    {
+      "title": "Gym",
+      "image": "/img/gym.jpg",
+      "medium": "Oil",
+      "size": "61 × 46 cm",
+      "sold": false
+    },
+    {
+      "title": "Gardeners",
+      "image": "/img/gardeners.jpg",
+      "medium": "Oil",
+      "size": "61 × 44 cm",
+      "price": 2000,
+      "sold": false
+    },
+    {
+      "title": "A Walk in Nature",
+      "image": "/img/a-walk-in-nature.jpg",
+      "medium": "Oil",
+      "size": "61 × 49 cm",
+      "price": 2000,
+      "sold": false
+    },
+    {
+      "title": "On the Bus",
+      "image": "/img/on-the-bus.jpg",
+      "medium": "Oil",
+      "size": "38 × 40 cm",
+      "price": 1800,
+      "sold": false
+    },
+    {
+      "title": "Head in the Hedgerow",
+      "image": "/img/head-in-the-hedgerow.jpg",
+      "sold": false
+    },
+    {
+      "title": "In the Office",
+      "image": "/img/in-the-office.jpg",
+      "medium": "Oil",
+      "size": "46 × 61 cm",
+      "price": 2000,
+      "sold": false
+    },
+    {
+      "title": "Two Skinny Lattes",
+      "image": "/img/two-skinny-lattes.jpg",
+      "medium": "Oil",
+      "size": "61 × 46 cm",
+      "price": 2000,
+      "sold": false
+    },
+    {
+      "title": "Into the Reception Room",
+      "image": "/img/two-people-waiting.jpg",
+      "medium": "Acrylic",
+      "size": "26 × 19 cm",
+      "price": 700,
+      "sold": false
+    },
+    {
+      "title": "A Swirl",
+      "image": "/img/a-swirl.jpg",
+      "medium": "Oil",
+      "size": "46 × 61 cm",
+      "price": 2000,
+      "sold": false
+    },
+    {
+      "title": "The Land of the Lizard",
+      "image": "/img/the-land-of-the-lizard.jpg",
+      "medium": "Oil",
+      "size": "51 × 61 cm",
+      "price": 2500,
+      "sold": false
+    },
+    {
+      "title": "The Garden in Chelsea",
+      "image": "/img/the-garden-in-chelsea.jpg",
+      "medium": "Oil",
+      "size": "61 × 46 cm",
+      "price": 2400,
+      "sold": false
+    },
+    {
+      "title": "Chopsticks",
+      "image": "/img/chopsticks.jpg",
+      "medium": "Oil",
+      "size": "61 × 46 cm",
+      "price": 2400,
+      "sold": false
+    },
+    {
+      "title": "Conversation",
+      "image": "/img/conversation.jpg",
+      "sold": false
+    },
+    {
+      "title": "On the Bench",
+      "image": "/img/on-the-bench.jpg",
+      "sold": false
+    },
+    {
+      "title": "Ice Cream",
+      "image": "/img/ice-cream.jpg",
+      "sold": false
+    },
+    {
+      "title": "Reading Under the Tree",
+      "image": "/img/reading-under-the-tree.jpg",
+      "sold": false
+    },
+    {
+      "title": "On the Sofa",
+      "image": "/img/on-the-sofa.jpg",
+      "sold": false
+    },
+    {
+      "title": "The Embrace",
+      "image": "/img/the-embrace.jpg",
+      "sold": false
+    },
+    {
+      "title": "The Dog",
+      "image": "/img/the-dog.jpg",
+      "sold": false
+    },
+    {
+      "title": "The Promenade",
+      "image": "/img/the-promenade.jpg",
+      "sold": false
+    },
+    {
+      "title": "The Red House",
+      "image": "/img/the-red-house.jpg",
+      "sold": false
+    },
+    {
+      "title": "A Wild Place",
+      "image": "/img/a-wild-place.jpg",
+      "medium": "Oil",
+      "size": "61 × 46 cm",
+      "price": 2000,
+      "sold": false
+    },
+    {
+      "title": "Asleep",
+      "image": "/img/asleep.jpg",
+      "sold": false
+    },
+    {
+      "title": "Clearing the Ruin",
+      "image": "/img/clearing-the-ruin.jpg",
+      "sold": false
+    },
+    {
+      "title": "Woman in Red",
+      "image": "/img/woman-in-red.jpg",
+      "sold": false
+    },
+    {
+      "title": "Eating a Peach",
+      "image": "/img/eating-a-peach.jpg",
+      "sold": false
+    }
+  ],
+  "drawings_intro": "Ink and brush drawings, shown at the Works on Paper Fair.",
+  "drawings": [
+    {
+      "title": "Two People by a Hedge",
+      "image": "/img/two-people-hedge.jpg",
+      "medium": "Ink",
+      "sold": false
+    },
+    {
+      "title": "Laughing Woman",
+      "image": "/img/laughing-woman.jpg",
+      "medium": "Ink",
+      "sold": false
+    }
+  ],
+  "framing_note": "Where a framed price is shown, the painting can be bought framed or unframed.",
+  "delivery_note": "Delivery can be arranged in the UK and abroad. The cost depends on the size of the painting and where it is going, and is confirmed when you enquire.",
+  "about_lede": "The pictures are inventions, or reinventions of reality. Sometimes they may appear a little awkward and strange, but it is their awkwardness that gives them the power to communicate.",
+  "about_text": "Richard Sorrell was born in 1948, the son of the historical draughtsman and painter Alan Sorrell and the watercolourist Elizabeth Sorrell. He studied at Walthamstow Art School, Kingston College of Art and the Royal Academy Schools.\n\nFor around 25 years, living in London and Norfolk, he painted landscape, still life and portraits, and became known for aerial views of great houses for the National Trust and private owners. Over the past two decades the invented paintings have come to the fore, alongside an interest in sculpture, gardens and planting.\n\nHe was elected to the Royal Watercolour Society in 1975 and served as its President from 2006 to 2009.",
+  "societies": [
+    {
+      "name": "Royal Watercolour Society",
+      "note": "President 2006 to 2009"
+    },
+    {
+      "name": "Royal Society of British Artists",
+      "note": "de Laszlo Medal 2002"
+    },
+    {
+      "name": "New English Art Club"
+    },
+    {
+      "name": "Art Workers Guild"
+    },
+    {
+      "name": "Small Paintings Group"
+    }
+  ],
+  "collections": [
+    {
+      "name": "Victoria and Albert Museum"
+    },
+    {
+      "name": "The National Trust"
+    },
+    {
+      "name": "Museum of London"
+    },
+    {
+      "name": "The Courtauld Institute"
+    },
+    {
+      "name": "The Faringdon Collection"
+    }
+  ],
+  "films": [
+    {
+      "title": "Landscape and Figures",
+      "text": "From The Sunshine Painters and The Open Sky, two films by Stephen Gammond featuring Richard Sorrell.",
+      "url": "https://www.youtube.com/watch?v=PMdFaf_LvwY"
+    },
+    {
+      "title": "A Virtual Exhibition",
+      "text": "Richard introduces the idea behind showing his work online as an exhibition you can walk through.",
+      "url": "https://www.youtube.com/watch?v=s5n29ksD5f4"
+    }
+  ],
+  "phone": "+44 7979 514 618",
+  "email": "sorrellr@aol.com",
+  "address": "Higher Hellangove Farm\nBadgers Cross, Gulval\nPenzance, Cornwall TR20 8XD"
 }
