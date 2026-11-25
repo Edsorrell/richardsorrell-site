@@ -323,6 +323,32 @@
     $('series').innerHTML=out;
   }
 
+
+  /* ---------- In-page links: land exactly on the section, even while content and images are still loading ---------- */
+  var follow=null;
+  function goTo(id,smooth){
+    var el=document.getElementById(id); if(!el) return false;
+    if(follow) follow.stop();
+    var start=Date.now(), stopped=false, last=null;
+    function target(){var m=parseFloat(getComputedStyle(el).scrollMarginTop)||0;return Math.max(0,Math.round(el.getBoundingClientRect().top+scrollY-m));}
+    function stop(){if(stopped)return;stopped=true;clearInterval(t);['wheel','touchstart','keydown','mousedown'].forEach(function(e){removeEventListener(e,stop,true);});follow=null;}
+    ['wheel','touchstart','keydown','mousedown'].forEach(function(e){addEventListener(e,stop,{capture:true,passive:true});});
+    window.scrollTo({top:target(),behavior:smooth?'smooth':'instant'});
+    var t=setInterval(function(){
+      var y=target(), el_=Date.now()-start;
+      if(el_>(smooth?900:0) && Math.abs(scrollY-y)>3 && (scrollY+innerHeight<document.documentElement.scrollHeight-2||y<scrollY)) window.scrollTo({top:y,behavior:'instant'});
+      if(el_>3500) stop();
+    },120);
+    follow={stop:stop}; return true;
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]'); if(!a||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey) return;
+    var u=new URL(a.getAttribute('href'),location.href);
+    if(u.origin!==location.origin||!u.hash||u.pathname.replace(/\.html$/,'').replace(/\/$/,'')!==location.pathname.replace(/\.html$/,'').replace(/\/$/,'')) return;
+    var id=decodeURIComponent(u.hash.slice(1)); if(ids[id]||!document.getElementById(id)) return;
+    e.preventDefault(); history.pushState(null,'','#'+id); goTo(id,true);
+  });
+
   /* ---------- Boot ---------- */
   var need=[getJSON('/data/site.json'),getJSON('/data/archive.json').catch(function(){return {};})];
   if(page==='about'||page==='exhibitions') need.push(getJSON('/data/exhibitions.json').catch(function(){return {};}));
@@ -335,5 +361,6 @@
     if(page==='exhibitions') initExhibitions(ex);
     if(page==='archive') initArchive(ar);
     openFromHash();
+    if(location.hash&&!ids[location.hash.slice(1)]) goTo(location.hash.slice(1),false);
   }).catch(function(){var m=$('load-error');if(m)m.style.display='';});
 })();
