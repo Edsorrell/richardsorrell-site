@@ -207,6 +207,11 @@ body.lbx-open{overflow:hidden}
 /* Welcome */
 .welcome{display:grid;grid-template-columns:5fr 6fr;gap:clamp(32px,6vw,96px);align-items:center}
 .w-photo img{aspect-ratio:4/5;object-fit:cover}
+.w-frame{position:relative}
+.w-frame img{display:block;width:100%}
+.w-frame .w-alt{position:absolute;inset:0;height:100%;opacity:0}
+@media (prefers-reduced-motion:no-preference){.w-frame .w-alt{animation:wfade 16s ease-in-out infinite}}
+@keyframes wfade{0%,37.5%{opacity:0}50%,87.5%{opacity:1}100%{opacity:0}}
 .w-photo .cap{margin-top:12px}
 .w-body{margin-top:20px;max-width:52ch;color:var(--mute);font-size:16px}
 .w-body p:first-child{font:400 clamp(24px,2.4vw,34px)/1.25 var(--serif);color:var(--ink);margin-bottom:24px;max-width:28ch}

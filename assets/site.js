@@ -250,7 +250,8 @@
   }
   function initWelcome(d){
     var wp=d.welcome_photo||{};
-    if(wp.image){$('w-img').src=wp.image;$('w-cap').innerHTML=wp.caption?'<span>'+esc(wp.caption)+'</span>':'';}
+    if(wp.image){$('w-img').src=wp.image;$('w-cap').innerHTML=wp.caption?'<span>'+esc(wp.caption)+'</span>':'';
+      if(wp.image2){var i2=document.createElement('img');i2.className='w-alt';i2.src=wp.image2;i2.alt='';i2.loading='lazy';i2.setAttribute('aria-hidden','true');$('w-img').parentNode.appendChild(i2);}}
     else{document.querySelector('.w-photo').style.display='none';}
     $('w-body').innerHTML=paras(d.welcome_text);
   }

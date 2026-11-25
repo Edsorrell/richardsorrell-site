@@ -24,6 +24,7 @@ content:
         type: object
         fields:
           - { name: image, label: Photo, type: image }
+          - { name: image2, label: Second photo (fades in and out with the first; leave empty for just one), type: image }
           - { name: caption, label: Caption, type: string }
       - { name: welcome_text, label: About Richard text (leave an empty line between paragraphs), type: text }
       - name: news
