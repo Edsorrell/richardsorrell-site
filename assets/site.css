@@ -158,6 +158,8 @@ body.lbx-open{overflow:hidden}
 .lbx h2{font:400 34px/1.08 var(--serif)}
 .lbx .meta{color:var(--mute);font-size:15px;margin-top:-12px}
 .lbx .note{font-size:15px}
+.note-more{display:none}
+@media (max-width:900px){.note-more{display:inline-block}}
 .opts{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink)}
 .opts button{background:none;border:0;padding:12px 14px;text-align:left;font:inherit;cursor:pointer;color:var(--ink)}
 .opts button+button{border-left:1px solid var(--ink)}
@@ -288,7 +290,11 @@ body.lbx-open{overflow:hidden}
   .lbx h2{font-size:24px;line-height:1.1}
   .lbx .side .meta{grid-column:1;font-size:13px;margin:0}
   .lbx .side .price{grid-column:2;grid-row:1/span 2;align-self:end;justify-self:end;font-size:22px;margin:0}
-  .lbx .side .note,.lbx .side .dl{display:none}
+  .lbx .side .dl{display:none}
+  .lbx .side .note-wrap{margin-top:6px}
+  .lbx .side .note{font-size:14px;line-height:1.45;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+  .lbx .side .note-wrap.open .note{display:block;-webkit-line-clamp:unset;max-height:30vh;overflow:auto}
+  .note-more{background:none;border:0;padding:2px 0 0;font:inherit;font-size:13px;color:var(--mute);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
   .lbx .side .opts{margin-top:8px}
   .lbx .side .opts button{padding:8px 12px}
   .lbx .side .opts button span{font-size:16px}

@@ -148,8 +148,7 @@
     var g=groups[cur[0]], w=g[cur[1]], sell=!!sellGroups[cur[0]];
     var h='<div><h2>'+esc(w.title)+'</h2></div>';
     var m=caption(w); if(m) h+='<p class="meta">'+esc(m)+'</p>';
-    if(w.note&&sell) h+='<p class="note">'+esc(w.note)+'</p>';
-    if(!sell&&w.note) h+='<p class="meta">'+esc(w.note)+'</p>';
+    if(w.note) h+='<div class="note-wrap"><p class="note">'+esc(String(w.note).trim()).replace(/\n+/g,'<br>')+'</p></div>';
     if(sell){
       if(w.sold){ h+='<p class="dot">Sold</p><p class="small">Similar work may be available. Please get in touch.</p>'; }
       else if(w.price&&w.framed_price){
@@ -164,6 +163,12 @@
     }
     var side=lb.querySelector('.side'); side.innerHTML=h;
     Array.prototype.forEach.call(side.querySelectorAll('.opts button'),function(b){b.onclick=function(){choice=b.getAttribute('data-c');renderSide();if(roomOpen)renderRoom();};});
+    var nw=side.querySelector('.note-wrap'), np=nw&&nw.querySelector('.note');
+    if(np&&np.scrollHeight>np.clientHeight+2){
+      var mb=document.createElement('button'); mb.className='note-more'; mb.type='button'; mb.textContent='More';
+      mb.onclick=function(){var o=nw.classList.toggle('open');mb.textContent=o?'Less':'More';if(roomOpen)fitRoom();};
+      nw.appendChild(mb);
+    }
     var rb=side.querySelector('[data-room]'); if(rb) rb.onclick=function(){setRoom(!roomOpen);};
   }
   function show(anim){
