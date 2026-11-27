@@ -26,6 +26,7 @@ for name in sorted(os.listdir(ROOT)):
         exif_rot = im.getexif().get(0x0112, 1) not in (1, None)
         big = name not in KEEP and (max(im.size) > MAX or os.path.getsize(path) > 1_200_000)
         fmt = 'PNG' if name.lower().endswith('.png') else ('WEBP' if name.lower().endswith('.webp') else 'JPEG')
+        resized = False
         if (exif_rot and name not in KEEP) or big:
             im = ImageOps.exif_transpose(im)
             if max(im.size) > MAX:
@@ -34,11 +35,11 @@ for name in sorted(os.listdir(ROOT)):
                 im.convert('RGB').save(path, 'JPEG', quality=86, optimize=True, progressive=True)
             else:
                 im.save(path, fmt, optimize=True)
-            changed += 1
+            changed += 1; resized = True
             print('resized', name, im.size)
             im = Image.open(path)
         sp = os.path.join(SM, name)
-        if not os.path.exists(sp) or os.path.getmtime(sp) < os.path.getmtime(path):
+        if not os.path.exists(sp) or resized:
             t = ImageOps.exif_transpose(im)
             t.thumbnail((THUMB, THUMB * 2), Image.LANCZOS)
             if fmt == 'JPEG':
