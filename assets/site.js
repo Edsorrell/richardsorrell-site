@@ -31,7 +31,9 @@
     var right='';
     if(sell){ right=w.sold?'<span class="pr dot">Sold</span>':(w.price?'<span class="pr">'+money(w.price)+'</span>':''); }
     else if(w.sold){ right='<span class="pr">'+esc(w.note||'')+'</span>'; }
-    return '<div class="work" data-sold="'+(w.sold?1:0)+'"><a href="#'+w._id+'" data-open="'+w._id+'"><img src="'+esc(thumb(w.image))+'" data-full="'+esc(w.image)+'" onerror="if(this.src.indexOf(this.dataset.full)<0){this.src=this.dataset.full}" alt="'+esc(w.title)+'" loading="lazy"></a><div class="cap"><b>'+esc(w.title)+'</b>'+right+'</div></div>';
+    var href=(group==='paintings'||group==='drawings')?'/'+group+'/'+w._id.slice(2):'#'+w._id;
+    var alt=[w.title,'by Richard Sorrell',[w.medium?String(w.medium).charAt(0).toUpperCase()+String(w.medium).slice(1):'',w.size].filter(Boolean).join(', ')].filter(Boolean).join(', ');
+    return '<div class="work" data-sold="'+(w.sold?1:0)+'"><a href="'+esc(href)+'" data-open="'+w._id+'"><img src="'+esc(thumb(w.image))+'" data-full="'+esc(w.image)+'" onerror="if(this.src.indexOf(this.dataset.full)<0){this.src=this.dataset.full}" alt="'+esc(alt)+'" loading="lazy"></a><div class="cap"><b>'+esc(w.title)+'</b>'+right+'</div></div>';
   }
 
   var lb, cur=null, choice='unframed', sellGroups={paintings:1,drawings:1};
@@ -199,11 +201,11 @@
     var a=document.querySelector('[data-open="'+w._id+'"]'); if(a) a.scrollIntoView({block:'center'});
   }
   document.addEventListener('click',function(e){
-    var a=e.target.closest&&e.target.closest('[data-open]'); if(!a) return;
+    var a=e.target.closest&&e.target.closest('[data-open]'); if(!a||e.metaKey||e.ctrlKey||e.shiftKey||e.button) return;
     e.preventDefault(); open(a.getAttribute('data-open'));
   });
   window.addEventListener('hashchange',function(){var h=location.hash.slice(1);if(ids[h])open(h);});
-  function openFromHash(){var h=location.hash.slice(1);if(ids[h])open(h);}
+  function openFromHash(){var h=location.hash.slice(1),room=/\/room$/.test(h);h=h.replace(/\/room$/,'');if(ids[h]){open(h);if(room&&sizeCm(groups[ids[h][0]][ids[h][1]]))setRoom(true);}}
 
   /* ---------- Shared bits ---------- */
   function footer(){
