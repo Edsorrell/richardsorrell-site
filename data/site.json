@@ -9,8 +9,8 @@
   },
   "welcome_photo": {
     "image": "/img/studio.jpg",
-    "caption": "Richard in his studio, West Cornwall",
-    "image2": "/img/studio-2.jpg"
+    "image2": "/img/studio-2.jpg",
+    "caption": "Richard in his studio, West Cornwall"
   },
   "welcome_text": "Richard Sorrell was born in 1948 into a family of artists: his father was the draughtsman and painter Alan Sorrell, his mother the watercolourist Elizabeth Sorrell.\n\nAfter training at Kingston and the Royal Academy Schools, he spent some twenty-five years painting landscape, still life and aerial views of great houses for the National Trust. Today he paints invented pictures of people and places, from sketches, memory and imagination, in his studio near Penzance.\n\nHe is a past President of the Royal Watercolour Society, a member of the Royal Society of British Artists and the New English Art Club, and shows at the Royal Academy Summer Exhibition.",
   "paintings_heading": "Landscape and figures",
@@ -37,15 +37,13 @@
       "image": "/img/the-lit-window.jpg",
       "medium": "acrylic",
       "size": "19x28cm",
+      "price": 800,
       "sold": false,
-      "note": "An observer looks through a telescope at the night sky. Close by a shadowy figure moves outside.",
-      "price": 800
+      "note": "An observer looks through a telescope at the night sky. Close by a shadowy figure moves outside."
     },
     {
       "title": "On the Terrace",
       "image": "/img/on-the-terrace.jpg",
-      "medium": "",
-      "size": "",
       "sold": false
     },
     {
@@ -359,6 +357,157 @@
       "title": "Laughing Woman",
       "image": "/img/laughing-woman.jpg",
       "medium": "Ink",
+      "sold": false
+    },
+    {
+      "title": "Porthole",
+      "image": "/img/20261126_101005.jpg",
+      "year": "2026",
+      "medium": "mixed",
+      "size": "100x70",
+      "price": 500,
+      "sold": false,
+      "note": "A woman looks out of a porthole. A dolphin can be seen ."
+    },
+    {
+      "title": "Rabbit",
+      "image": "/img/20261126_101152.jpg",
+      "year": "2018",
+      "medium": "ink",
+      "size": "57x48",
+      "price": 250,
+      "sold": false
+    },
+    {
+      "title": "Eye contact",
+      "image": "/img/20261126_101128.jpg",
+      "year": "2020",
+      "medium": "ink",
+      "size": "42x48",
+      "price": 200,
+      "sold": false
+    },
+    {
+      "title": "Blue Room",
+      "image": "/img/20261126_101102.jpg",
+      "year": "2020",
+      "medium": "ink, crayon",
+      "size": "74x64",
+      "price": 600,
+      "sold": false
+    },
+    {
+      "title": "Euphorbia",
+      "image": "/img/20261126_101037.jpg",
+      "year": "2020",
+      "medium": "charcoal",
+      "size": "80x48",
+      "price": 200,
+      "sold": false
+    },
+    {
+      "title": "Woman in a blue chair",
+      "image": "/img/20261127_101752.jpg",
+      "year": "2026",
+      "medium": "mixed",
+      "size": "70x48",
+      "price": 300,
+      "sold": false,
+      "note": "A woman sits in a blue chair. Her hands are clasped. She glances to her right."
+    },
+    {
+      "title": "Red curtains",
+      "image": "/img/20261127_132740.jpg",
+      "year": "2026",
+      "medium": "mixed",
+      "size": "40x30",
+      "price": 300,
+      "sold": false,
+      "note": "A man and a woman meet  for the first time in front of a window with red curtains. "
+    },
+    {
+      "title": "A moment of calm",
+      "image": "/img/20261127_131320.jpg",
+      "year": "2026",
+      "medium": "ink",
+      "size": "25x20",
+      "price": 200,
+      "sold": false
+    },
+    {
+      "title": "A plate of grapes",
+      "image": "/img/20261127_131259.jpg",
+      "year": "2026",
+      "medium": "ink",
+      "size": "25x20",
+      "price": 200,
+      "sold": false,
+      "note": "A couple are tempted by a plate of grapes, and wiat to see who makes the first move."
+    },
+    {
+      "title": "Looking out at the sea",
+      "image": "/img/20261127_131150.jpg",
+      "year": "2026",
+      "medium": "ink",
+      "size": "25x20",
+      "price": 200,
+      "sold": false,
+      "note": "A couple sit on a sea wall looking across the beach. The sea is calm and stretches endlessly."
+    },
+    {
+      "title": "Red tie",
+      "image": "/img/20261127_131235.jpg",
+      "year": "2026",
+      "medium": "ink and acrylic",
+      "size": "30x25",
+      "price": 200,
+      "sold": false
+    },
+    {
+      "title": "Pancake",
+      "image": "/img/20261127_131115.jpg",
+      "year": "2020",
+      "medium": "charcoal",
+      "size": "40x27",
+      "price": 180,
+      "sold": false
+    },
+    {
+      "title": "Gulls over rooftops",
+      "image": "/img/20261127_131407.jpg",
+      "year": "2026",
+      "medium": "acrylic ",
+      "size": "25x32",
+      "price": 250,
+      "sold": false,
+      "note": "Seagulls swoop and cry over Penzance"
+    },
+    {
+      "title": "Yellow table",
+      "image": "/img/20261127_131637.jpg",
+      "year": "2026",
+      "medium": "ink, acrylic",
+      "size": "29x39",
+      "price": 220,
+      "sold": false,
+      "note": "Two men sit at a table and talk. Behind two women chat to each other."
+    },
+    {
+      "title": "Rook",
+      "image": "/img/20261127_131555.jpg",
+      "year": "2026",
+      "medium": "ink",
+      "size": "29x39",
+      "price": 220,
+      "sold": false
+    },
+    {
+      "title": "Duck wood",
+      "image": "/img/20261127_131750.jpg",
+      "year": "2026",
+      "medium": "watercolour and acrylic",
+      "size": "46x65",
+      "price": 400,
       "sold": false
     }
   ],
