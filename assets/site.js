@@ -21,7 +21,7 @@
   }
   function withInches(sz){
     sz=String(sz||'');if(!sz||/\bin\b|"|inch/i.test(sz))return sz;
-    var m=sz.match(/(\d+(?:\.\d+)?)\s*[×xX]\s*(\d+(?:\.\d+)?)\s*cm/);if(!m)return sz;
+    var m=sz.match(/(\d+(?:\.\d+)?)\s*[×xX]\s*(\d+(?:\.\d+)?)\s*(cm)?\s*$/i);if(!m)return sz;
     var f=function(c){var v=c/2.54;return (Math.round(v*2)/2).toString().replace(/\.0$/,'');};
     return sz+' ('+f(parseFloat(m[1]))+' × '+f(parseFloat(m[2]))+' in)';
   }
@@ -99,14 +99,17 @@
     var hi=Math.max(a,b),lo=Math.min(a,b),im=lb&&lb.querySelector('.slide.on img'),land=null;
     if(im&&im.naturalWidth) land=im.naturalWidth>=im.naturalHeight;
     if(land===null) return {h:a,w:b};
-    return land?{w:hi,h:lo}:{w:lo,h:hi};
+    /* Keep the photo's own proportions (the longest side is true to size), so the
+       picture never gets stretched or padded in the room view */
+    var r=Math.min(im.naturalWidth,im.naturalHeight)/Math.max(im.naturalWidth,im.naturalHeight);
+    return land?{w:hi,h:hi*r}:{w:hi*r,h:hi};
   }
   /* Real room photographs (Unsplash licence). Calibrated in photo pixels:
      ppc = pixels per cm on the wall plane, cx = centre line, base = y of the
      painting's lowest allowed edge, floor/eye = optional eye-level hanging. */
   var ROOMS={
     bedroom:{label:'Bedroom',img:'/img/rooms/bedroom.jpg',W:1460,H:1394,ppc:10,cx:599,base:750,ref:'The side table is about 45 cm wide.'},
-    living:{label:'Living room',img:'/img/rooms/mantel.jpg',W:1460,H:1800,ppc:8.0,cx:736,base:1170,front:{img:'/img/rooms/mantel-front.png',x:876,y:604,w:511,h:868},ref:'The mantelpiece is about 1.5 m wide.'},
+    living:{label:'Living room',img:'/img/rooms/mantel.jpg',W:1460,H:1800,ppc:8.0,cx:736,base:1170,mid:900,front:{img:'/img/rooms/mantel-front.png',x:876,y:604,w:511,h:868},ref:'The mantelpiece is about 1.5 m wide.'},
     studio:{label:'Studio wall',img:'/img/rooms/studio.jpg',W:1460,H:974,ppc:2.58,cx:545,floor:707,ref:'The stool is about 1 m high.'}
   };
   var BIG=100; /* studio wall only for very large pieces (longest side over 1 m) */
@@ -116,7 +119,7 @@
     var s=sizeCm(w); if(!s) return '';
     var R=ROOMS[kind], fr=framed?5:0, ow=(s.w+fr*2)*R.ppc, oh=(s.h+fr*2)*R.ppc, top;
     if(R.floor!=null){var c=Math.max(150,110+(s.h+fr*2)/2);top=R.floor-c*R.ppc-oh/2;}
-    else top=R.base-oh;
+    else top=R.mid!=null?Math.min(R.mid-oh/2,R.base-oh):R.base-oh;
     var left=R.cx-ow/2, pc=function(v,t){return (v/t*100).toFixed(3)+'%';};
     var sh=Math.max(1,R.ppc*0.5);
     return '<div class="rv-ph" data-w="'+R.W+'" data-h="'+R.H+'"><img src="'+R.img+'" alt="">'+
@@ -133,9 +136,9 @@
   function renderRoom(){
     var g=groups[cur[0]], w=g[cur[1]], rv=lb.querySelector('.roomview'), s=sizeCm(w);
     var framed=!!(w.framed_price&&choice==='framed');
-    var list=roomList(s); if(!roomKind||list.indexOf(roomKind)<0) roomKind=autoRoom(s);
+    roomKind=autoRoom(s);
     var R=ROOMS[roomKind];
-    rv.innerHTML='<div class="rv-bar"><div class="rv-tabs" role="group" aria-label="Room">'+list.map(function(k){return '<button data-r="'+k+'" aria-pressed="'+(roomKind===k)+'">'+ROOMS[k].label+'</button>';}).join('')+'</div><button class="rv-back">Back to painting</button></div>'+
+    rv.innerHTML='<div class="rv-bar"><div class="rv-tabs"><span class="rv-label">'+R.label+'</span></div><button class="rv-back">Back to painting</button></div>'+
       '<div class="rv-scene">'+roomScene(w,roomKind,framed)+'</div><p class="rv-note">'+esc(w.title)+(w.size?', '+esc(withInches(w.size)):'')+(framed?', framed':'')+', shown approximately to scale. '+R.ref+'</p>';
     Array.prototype.forEach.call(rv.querySelectorAll('.rv-tabs button'),function(b){b.onclick=function(){roomKind=b.getAttribute('data-r');renderRoom();};});
     rv.querySelector('.rv-back').onclick=function(){setRoom(false);};
